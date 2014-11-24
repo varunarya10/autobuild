@@ -1,1 +1,46 @@
-# Nothing for now
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+
+PROJECTS = cinder cinderclient
+TARGET_DIR = rjil-cicd
+
+
+#[ ! -d $(TARGET_DIR) ] || mkdir $(TARGET_DIR)
+
+
+build: build-arch build-indep
+
+build-arch: build-arch-stamp
+	
+build-arch-stamp: 
+	dh_testdir
+	for item in $(PROJECTS); do \
+		test -d $$item || exit 1; \
+		echo "Calling setup.py build on $$item"; \
+		cd $$item; \
+		test -f setup.py && python setup.py build; \
+		cd ..; \
+	done
+	touch build-arch-stamp
+
+build-indep: build-indep-stamp
+
+build-indep-stamp: 
+	touch build-indep-stamp
+
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-arch-stamp build-indep-stamp #CONFIGURE-STAMP#
+	for item in $(PROJECTS); do \
+		[ -d $$item ] || exit 1; \
+		echo "Calling setup.py clean on $$item"; \
+		cd $$item; \
+		test -f setup.py && python setup.py clean; \
+		cd ..; \
+	done
+	dh_clean 
+
