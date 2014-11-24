@@ -1,0 +1,12 @@
+Source: rjil-cicd
+Section: admin
+Priority: optional
+Maintainer: Ritesh Raj Sarraf <Ritesh.Sarraf@ril.com>
+Build-Depends: debhelper (>= 5.0.0), python
+Standards-Version: 3.9.2
+
+Package: rjil-cicd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Description: Monolithic deb package
+ This is a monolithic deb package comprising of all openstack modules
