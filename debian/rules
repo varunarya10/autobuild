@@ -1,46 +1,43 @@
 #!/usr/bin/make -f
 
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
+SHELL := sh -e
 
-PROJECTS = cinder cinderclient
-TARGET_DIR = rjil-cicd
+DESTDIR := $(CURDIR)/debian/rjil-cicd
+PROJECTS := $(filter-out debian, $(wildcard *))
 
+%:
+	dh $@ --with python2
 
-#[ ! -d $(TARGET_DIR) ] || mkdir $(TARGET_DIR)
-
-
-build: build-arch build-indep
-
-build-arch: build-arch-stamp
-	
-build-arch-stamp: 
-	dh_testdir
-	for item in $(PROJECTS); do \
-		test -d $$item || exit 1; \
-		echo "Calling setup.py build on $$item"; \
-		cd $$item; \
-		test -f setup.py && python setup.py build; \
+override_dh_auto_clean:
+	dh_auto_clean
+	for PROJ in $(PROJECTS); \
+	do \
+		#TODO: Need to investigate the equivalent of `make -C` in setuptools \
+		cd $${PROJ}; \
+		echo "Cleaning project $${PROJ}"; \
+		python setup.py clean; \
+		rm -rf build; \
+		rm -rf $${PROJ}-*egg-info; \
 		cd ..; \
 	done
-	touch build-arch-stamp
 
-build-indep: build-indep-stamp
-
-build-indep-stamp: 
-	touch build-indep-stamp
-
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-arch-stamp build-indep-stamp #CONFIGURE-STAMP#
-	for item in $(PROJECTS); do \
-		[ -d $$item ] || exit 1; \
-		echo "Calling setup.py clean on $$item"; \
-		cd $$item; \
-		test -f setup.py && python setup.py clean; \
+override_dh_auto_build:
+	for PROJ in $(PROJECTS); \
+	do \
+		cd $${PROJ}; \
+		echo "Building project $${PROJ}"; \
+		python setup.py build; \
 		cd ..; \
 	done
-	dh_clean 
+
+override_dh_auto_install:
+	for PROJ in $(PROJECTS); \
+	do \
+		cd $${PROJ}; \
+		echo "Installing project $${PROJ}"; \
+		python setup.py install; \
+		cd ..; \
+	done
 
