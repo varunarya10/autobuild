@@ -2,7 +2,12 @@ Source: rjil-cicd
 Section: admin
 Priority: optional
 Maintainer: Ritesh Raj Sarraf <Ritesh.Sarraf@ril.com>
-Build-Depends: debhelper (>= 7), python, python-setuptools, python-pbr, dh-python
+Build-Depends: debhelper (>= 7),
+               python-all (>= 2.6.6-3~),
+               python-pbr (>= 0.6),
+               python-setuptools,
+               python-sphinx,
+               python-prettytable
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
