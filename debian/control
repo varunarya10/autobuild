@@ -13,5 +13,7 @@ Standards-Version: 3.9.2
 Package: rjil-cicd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
-Description: Monolithic deb package
- This is a monolithic deb package comprising of all openstack modules
+Description: Monolithic OpenStack deb package
+ This is a monolithic deb package comprising of the following openstack modules
+ * cinder
+ * python-cincerclient
