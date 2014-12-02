@@ -7,6 +7,7 @@
 # Binaries
 GIT=`which git`;
 REPO=`which repo`;
+DCH=`which dch`;
 
 
 PROJECTS="cinder python-cinderclient"
@@ -73,3 +74,7 @@ do
 		fi
 	fi
 done
+
+
+# Now let's populate debian/changelog
+cat $GITLOG | while read line; do $DCH "$line"; done
