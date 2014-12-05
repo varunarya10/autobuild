@@ -76,7 +76,7 @@ done
 
 
 # Create the changelog version first
-$DCH --newversion $VERSION.$BUILD_NUMBER
+$DCH --newversion $VERSION.$BUILD_NUMBER "Building against $VERSION.$BUILD_NUMBER"
 
 # Now let's populate debian/changelog
 cat $GITLOG | while read line; do $DCH "$line"; done
