@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+SHELL := sh -e
+
+DESTDIR := $(CURDIR)/debian/rjil-cicd
+PROJECTS := $(filter-out debian, $(wildcard *))
+
+# Override upstream's pbr based packaging
+export PBR_VERSION=2014.2
+export SKIP_PIP_INSTALL=1
+export SKIP_GIT_SDIST=1
+export SKIP_GENERATE_AUTHORS=1
+export SKIP_WRITE_GIT_CHANGELOG=1
+
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_clean:
+	for PROJ in $(PROJECTS); \
+	do \
+		cd $${PROJ} && dh_auto_clean && cd ..; \
+	done
+
+override_dh_auto_build:
+	for PROJ in $(PROJECTS); \
+	do \
+		cd $${PROJ} && dh_auto_build && cd ..; \
+	done
+
+override_dh_auto_install:
+	for PROJ in $(PROJECTS); \
+	do \
+		cd $${PROJ} && dh_auto_install && cd ..; \
+	done
+

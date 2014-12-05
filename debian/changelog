@@ -1,0 +1,5 @@
+rjil-cicd (1:2014.2) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 26 Nov 2014 14:19:21 +0530
