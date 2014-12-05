@@ -9,6 +9,7 @@ GIT=`which git`;
 REPO=`which repo`;
 DCH=`which dch`;
 DPKGBUILD=`which dpkg-buildpackage`;
+DISTRIBUTION="trusty"
 
 
 PROJECTS="cinder python-cinderclient"
@@ -83,6 +84,7 @@ $DCH --newversion $VERSION.$BUILD_NUMBER "Building against $VERSION.$BUILD_NUMBE
 # Now let's populate debian/changelog
 cat $GITLOG | while read line; do $DCH "$line"; done
 
+$DCH -D $DISTRIBUTION -r ""
 
 # Now let's (source) build it
 $DPKGBUILD -uc -us -S
