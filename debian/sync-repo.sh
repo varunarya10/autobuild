@@ -8,6 +8,7 @@
 GIT=`which git`;
 REPO=`which repo`;
 DCH=`which dch`;
+PDEBUILD=`which pdebuild`;
 
 
 PROJECTS="cinder python-cinderclient"
@@ -80,3 +81,17 @@ $DCH --newversion $VERSION.$BUILD_NUMBER "Building against $VERSION.$BUILD_NUMBE
 
 # Now let's populate debian/changelog
 cat $GITLOG | while read line; do $DCH "$line"; done
+
+
+# Now let's build it
+$PDEBUILD --debbuildopts "-i.git -I.git -i.repo -I.repo"
+
+if [ $? -eq  0 ]; then
+
+	# If the build is successful, commit the versioning changes
+	$GIT commit -m "Autocommit for build ID: $VERSION.$BUILD_NUMBER" $MANIFEST debian/changelog
+
+	# Now push it to the repo
+	$GIT push --all
+
+fi
