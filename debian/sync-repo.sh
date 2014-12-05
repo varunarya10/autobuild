@@ -86,12 +86,3 @@ cat $GITLOG | while read line; do $DCH "$line"; done
 # Now let's (source) build it
 $DPKGBUILD -uc -us -S
 
-if [ $? -eq  0 ]; then
-
-	# If the build is successful, commit the versioning changes
-	$GIT commit -m "Autocommit for build ID: $VERSION.$BUILD_NUMBER" $MANIFEST debian/changelog
-
-	# Now push it to the repo
-	$GIT push --all
-
-fi
