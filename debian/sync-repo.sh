@@ -17,6 +17,7 @@ MANIFEST="$BASEDIR/debian/manifest"
 OLD_MANIFEST="$BASEDIR/debian/manifest.old"
 GITLOG="$BASEDIR/debian/changelog.git"
 
+VERSION="2014.2"
 
 log () {
 	echo -en "$1";
@@ -53,8 +54,6 @@ if ! [ -f $OLD_MANIFEST ]; then
 fi
 
 
-echo -en "Changelog updates as on `date`\n\n\n" >> $GITLOG;
-
 for PROJ in $PROJECTS;
 do
 	CUR_LOG=`cat $MANIFEST | grep ^$PROJ | cut -d ' ' -f2`;
@@ -75,6 +74,9 @@ do
 	fi
 done
 
+
+# Create the changelog version first
+$DCH --newversion $VERSION.$BUILD_NUMBER
 
 # Now let's populate debian/changelog
 cat $GITLOG | while read line; do $DCH "$line"; done
