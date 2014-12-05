@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 7),
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
