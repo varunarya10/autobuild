@@ -54,6 +54,7 @@ if ! [ -f $OLD_MANIFEST ]; then
 	log "Manifest file $OLD_MANIFEST not available. Aborting.\n";
 fi
 
+rm $GITLOG
 
 for PROJ in $PROJECTS;
 do
