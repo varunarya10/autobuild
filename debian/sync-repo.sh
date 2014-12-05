@@ -84,7 +84,7 @@ cat $GITLOG | while read line; do $DCH "$line"; done
 
 
 # Now let's build it
-$PDEBUILD --debbuildopts "-i.git -I.git -i.repo -I.repo"
+#$PDEBUILD --debbuildopts "-i.git -I.git -i.repo -I.repo"
 
 if [ $? -eq  0 ]; then
 
