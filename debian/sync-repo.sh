@@ -87,5 +87,5 @@ cat $GITLOG | while read line; do $DCH "$line"; done
 $DCH -D $DISTRIBUTION -r ""
 
 # Now let's (source) build it
-$DPKGBUILD -uc -us -S
+$DPKGBUILD -uc -us -S -I.repo -I.git
 
