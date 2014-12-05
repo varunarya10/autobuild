@@ -17,7 +17,7 @@ MANIFEST="$BASEDIR/debian/manifest"
 OLD_MANIFEST="$BASEDIR/debian/manifest.old"
 GITLOG="$BASEDIR/debian/changelog.git"
 
-VERSION="2014.2"
+VERSION="1:2014.2"
 
 log () {
 	echo -en "$1";
