@@ -8,7 +8,7 @@
 GIT=`which git`;
 REPO=`which repo`;
 DCH=`which dch`;
-PDEBUILD=`which pdebuild`;
+DPKGBUILD=`which dpkg-buildpackage`;
 
 
 PROJECTS="cinder python-cinderclient"
@@ -83,8 +83,8 @@ $DCH --newversion $VERSION.$BUILD_NUMBER "Building against $VERSION.$BUILD_NUMBE
 cat $GITLOG | while read line; do $DCH "$line"; done
 
 
-# Now let's build it
-#$PDEBUILD --debbuildopts "-i.git -I.git -i.repo -I.repo"
+# Now let's (source) build it
+$DPKGBUILD -uc -us -S
 
 if [ $? -eq  0 ]; then
 
