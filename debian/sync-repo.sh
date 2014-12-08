@@ -35,8 +35,6 @@ mv -f $MANIFEST $OLD_MANIFEST;
 log "Generating new manifest file in $MANIFEST\n\n";
 $REPO forall -c 'echo -n "${REPO_PROJECT} " ; git rev-parse HEAD' > $MANIFEST;
 
-
-
 if ! [ -f $MANIFEST ]; then
 	log "Manifest file $MANIFEST not available. Aborting.\n";
 fi
@@ -52,27 +50,29 @@ do
 	CUR_LOG=`cat $MANIFEST | grep ^$PROJ | cut -d ' ' -f2`;
 	PREV_LOG=`cat $OLD_MANIFEST | grep ^$PROJ | cut -d ' ' -f2`;
 
-	if [ -z $CUR_LOG ] || [ -z $PREV_LOG ]; then
-		echo -en "Error in getting git log for proj $PROJ\n\n" >> $GITLOG;
-	else
-		if [ "$CUR_LOG" = "$PREV_LOG" ]; then
-			echo -en "No changes in project $PROJ\n\n" >> $GITLOG;
-		else
-			echo -en "Changes for project $PROJ since git revision $PREV_LOG\n\n" >> $GITLOG;
-			cd $BASEDIR/$PROJ;
-			$GIT log $PREV_LOG..$CUR_LOG --oneline >> $GITLOG;
-			cd $BASEDIR;
-			echo -en "Changes end for project $PROJ\n\n" >> $GITLOG;
-		fi
+	if [ -z "$CUR_LOG" ]
+	then
+		echo "Could not get current revision of $PROJ. Bailing out."
+		exit 1
+	elif [ -z "$PREV_LOG" ]
+	then
+		echo -en "$PROJ added at revison ${CUR_LOG}\n\n" >> $GITLOG;
+	elif [ "$CUR_LOG" != "$PREV_LOG" ]
+	then
+		cd $BASEDIR/$PROJ;
+		echo "${PROJ}:" >> $GITLOG;
+		$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' >> $GITLOG;
+		cd $BASEDIR;
 	fi
 done
 
+test -e $GITLOG || exit 2
 
 # Create the changelog version first
-$DCH --newversion $VERSION.$BUILD_NUMBER "Building against $VERSION.$BUILD_NUMBER"
+$DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
 
 # Now let's populate debian/changelog
-cat $GITLOG | while read line; do $DCH "$line"; done
+cat $GITLOG | while IFS= read line; do $DCH "$line"; done
 
 $DCH -D $DISTRIBUTION -r ""
 
