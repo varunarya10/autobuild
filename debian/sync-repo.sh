@@ -26,10 +26,6 @@ log () {
 }
 
 
-# Let's sync the repo first
-cd $BASEDIR;
-$REPO sync;
-
 if [ $? -ne 0 ]; then
 	log "Repo sync failed. Aborting.\n\n";
 	exit 1;
