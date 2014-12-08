@@ -12,7 +12,7 @@ DPKGBUILD=`which dpkg-buildpackage`;
 DISTRIBUTION="trusty"
 
 
-PROJECTS="cinder python-cinderclient"
+PROJECTS="cinder python-cinderclient oslo.messaging"
 BASEDIR=`pwd`;
 
 MANIFEST="$BASEDIR/debian/manifest"

@@ -17,3 +17,4 @@ Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
  * cinder
  * python-cincerclient
+ * oslo.messaging
