@@ -26,12 +26,6 @@ log () {
 }
 
 
-if [ $? -ne 0 ]; then
-	log "Repo sync failed. Aborting.\n\n";
-	exit 1;
-fi
-
-
 # Frist, backup the old manifest
 log "Backup $MANIFEST to $OLD_MANIFEST\n\n";
 mv -f $MANIFEST $OLD_MANIFEST;
