@@ -74,7 +74,7 @@ done
 # This package will only have an upstart job
 # This package should always depend on rjil-cicd
 
-for proj in $SERVER_PROJECTS;
+for proj in $SERVER_PACKAGES;
 do
 	# Generate debian/control details
 	echo -en "\n\nPackage: $proj
