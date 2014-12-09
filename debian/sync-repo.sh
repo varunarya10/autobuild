@@ -67,7 +67,7 @@ do
 	fi
 done
 
-test -e $GITLOG || exit 2
+#test -e $GITLOG || exit 2
 
 
 # Take each server daemon package and generate its listed in the control file
