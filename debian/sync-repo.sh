@@ -87,7 +87,7 @@ Description: Binary upstrat package: $proj
 
 	# Generate install files
 	# For every server daemon package, autobuild repo should have an upstart job available
-	echo -en "$proj.upstart\n" > $BASEDIR/debian/$proj.install
+	echo -en "debian/$proj.upstart\n" > $BASEDIR/debian/$proj.install
 done
 
 
