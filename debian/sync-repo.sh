@@ -11,10 +11,11 @@ DCH=`which dch`;
 DPKGBUILD=`which dpkg-buildpackage`;
 DISTRIBUTION="trusty"
 
-
+SERVER_PACKAGES="serverd dummyd"
 PROJECTS="cinder python-cinderclient oslo.messaging"
 BASEDIR=`pwd`;
 
+DEBCONTROL="$BASEDIR/debian/control"
 MANIFEST="$BASEDIR/debian/manifest"
 OLD_MANIFEST="$BASEDIR/debian/manifest.old"
 GITLOG="$BASEDIR/debian/changelog.git"
@@ -67,6 +68,23 @@ do
 done
 
 test -e $GITLOG || exit 2
+
+
+# Take each server daemon package and generate its listed in the control file
+# This package will only have an upstart job
+# This package should always depend on rjil-cicd
+
+for proj in $SERVER_PROJECTS;
+do
+	echo -en "\n\nPackage: $proj
+Architecture: all
+Depends: rjil-cicd
+Description: Binary upstrat package: $proj
+ Binary upstart package - $proj
+ .
+ This package should always depend on rjil-cicd\n\n" >> $DEBCONTROL
+done
+
 
 # Create the changelog version first
 $DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
