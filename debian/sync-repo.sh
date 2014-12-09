@@ -76,6 +76,7 @@ test -e $GITLOG || exit 2
 
 for proj in $SERVER_PROJECTS;
 do
+	# Generate debian/control details
 	echo -en "\n\nPackage: $proj
 Architecture: all
 Depends: rjil-cicd
@@ -83,6 +84,10 @@ Description: Binary upstrat package: $proj
  Binary upstart package - $proj
  .
  This package should always depend on rjil-cicd\n\n" >> $DEBCONTROL
+
+	# Generate install files
+	# For every server daemon package, autobuild repo should have an upstart job available
+	echo -en "$proj.upstart\n" > $BASEDIR/debian/$proj.install
 done
 
 
