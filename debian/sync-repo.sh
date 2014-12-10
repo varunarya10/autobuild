@@ -88,6 +88,12 @@ Description: Binary upstrat package: $proj
  .
  This package should always depend on rjil-cicd\n\n" >> $DEBCONTROL
 
+
+ 	# Dummy upstart jobs file
+	# When actual job files are shipped, this line should be deleted.
+	echo -en "Dummy $proj upstart job\n" > $BASEDIR/debian/$proj.upstart
+
+
 	# Generate install files
 	# For every server daemon package, autobuild repo should have an upstart job available
 	echo -en "debian/$proj.upstart\n" > $BASEDIR/debian/$proj.install
