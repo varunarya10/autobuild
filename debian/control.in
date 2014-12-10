@@ -18,23 +18,3 @@ Description: Monolithic OpenStack deb package
  * cinder
  * python-cincerclient
  * oslo.messaging
-
-
-Package: serverd
-Architecture: all
-Depends: rjil-cicd
-Description: Binary upstrat package: serverd
- Binary upstart package - serverd
- .
- This package should always depend on rjil-cicd
-
-
-
-Package: dummyd
-Architecture: all
-Depends: rjil-cicd
-Description: Binary upstrat package: dummyd
- Binary upstart package - dummyd
- .
- This package should always depend on rjil-cicd
-

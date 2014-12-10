@@ -74,6 +74,9 @@ done
 # This package will only have an upstart job
 # This package should always depend on rjil-cicd
 
+# First have a pristine control file
+cat $BASEDIR/debian/control.in > $BASEDIR/debian/control
+
 for proj in $SERVER_PACKAGES;
 do
 	# Generate debian/control details
