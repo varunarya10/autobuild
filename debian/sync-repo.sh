@@ -83,7 +83,7 @@ do
 	echo -en "\n\nPackage: $proj
 Architecture: all
 Depends: rjil-cicd
-Description: Binary upstrat package: $proj
+Description: Binary upstart package: $proj
  Binary upstart package - $proj
  .
  This package should always depend on rjil-cicd\n\n" >> $DEBCONTROL
