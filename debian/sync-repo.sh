@@ -12,7 +12,7 @@ DPKGBUILD=`which dpkg-buildpackage`;
 DISTRIBUTION="trusty"
 
 SERVER_PACKAGES="serverd dummyd"
-PROJECTS="cinder python-cinderclient oslo.messaging"
+PROJECTS="oslo.config oslo.messaging python-cinderclient python-novaclient python-swiftclient python-glanceclient python-neutronclient python-keystoneclient"
 BASEDIR=`pwd`;
 
 DEBCONTROL="$BASEDIR/debian/control"

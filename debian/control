@@ -15,7 +15,6 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
- * cinder
  * python-cincerclient
  * oslo.messaging
 
