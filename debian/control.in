@@ -21,7 +21,7 @@ Provides: python-oslo.messaging,
           python-glanceclient,
           python-neutronclient,
           python-keystoneclient
-Conflicts: python-oslo.messaging,
+Replaces: python-oslo.messaging,
           python-oslo.config,
           python-cinderclient,
           python-novaclient,
