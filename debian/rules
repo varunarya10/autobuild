@@ -17,22 +17,22 @@ export SKIP_GENERATE_AUTHORS=1
 export SKIP_WRITE_GIT_CHANGELOG=1
 
 
-%: debian/control
+%:
 	dh $@ --with python2
 
-override_dh_auto_clean:
+override_dh_auto_clean: debian/control
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_clean && cd ..; \
 	done
 
-override_dh_auto_build:
+override_dh_auto_build: debian/control
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_build && cd ..; \
 	done
 
-override_dh_auto_install:
+override_dh_auto_install: debian/control
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_install && cd ..; \
@@ -43,3 +43,5 @@ debian/control: debian/control.stub debian/control.tmpl $(UPSTART_JOBS)
 	for s in $(SERVERS); do \
 		sed -e s@PKGNAME@$$s@g < debian/control.tmpl >> debian/control ; \
 	done
+
+.PHONY: debian/control
