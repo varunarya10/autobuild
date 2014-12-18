@@ -17,7 +17,7 @@ export SKIP_GENERATE_AUTHORS=1
 export SKIP_WRITE_GIT_CHANGELOG=1
 
 
-%:
+%: debian/control
 	dh $@ --with python2
 
 override_dh_auto_clean:
@@ -38,7 +38,7 @@ override_dh_auto_install:
 		cd $${PROJ} && dh_auto_install && cd ..; \
 	done
 
-debian/control: debian/control.stub debian/control.tmpl
+debian/control: debian/control.stub debian/control.tmpl $(UPSTART_JOBS)
 	cp debian/control.stub debian/control
 	for s in $(SERVERS); do \
 		sed -e s@PKGNAME@$$s@g < debian/control.tmpl >> debian/control ; \
