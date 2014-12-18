@@ -21,6 +21,14 @@ Provides: python-oslo.messaging,
           python-glanceclient,
           python-neutronclient,
           python-keystoneclient
+Conflicts: python-oslo.messaging,
+          python-oslo.config,
+          python-cinderclient,
+          python-novaclient,
+          python-swiftclient,
+          python-glanceclient,
+          python-neutronclient,
+          python-keystoneclient
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
  * python-cincerclient
