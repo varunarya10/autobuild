@@ -7,3 +7,4 @@ python-glanceclient
 python-neutronclient
 python-keystoneclient
 python-ironic
+ironic-common
