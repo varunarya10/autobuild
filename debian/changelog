@@ -1,3 +1,23 @@
+rjil-cicd (1:2014.2.61) trusty; urgency=medium
+
+  * Automated build
+  * oslo.config added at revison
+    063a5ef7740a4c2b158cee5d3320ede4e71e594f
+  * oslo.messaging added at revison
+    d723bf96e64879f7b5a55a197b73b269cf0746ca
+  * python-novaclient added at revison
+    58b539e3982616c755557f6ce3d5509bdf695135
+  * python-swiftclient added at revison
+    83ca0b825d067c0a39c972fb0f58ce9ac34df9d2
+  * python-glanceclient added at revison
+    1511c86933bf73a3a5af32f52d15ad4d9fe0d03d
+  * python-neutronclient added at revison
+    fa5642f1550bc8f818c1686c40edbaf3672d356a
+  * python-keystoneclient added at revison
+    5081619f71a2faca2056ac038db55adde4679a72
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 18 Dec 2014 17:16:34 +0000
+
 rjil-cicd (1:2014.2) trusty; urgency=medium
 
   * Initial release.
