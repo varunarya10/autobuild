@@ -11,7 +11,6 @@ DCH=`which dch`;
 DPKGBUILD=`which dpkg-buildpackage`;
 DISTRIBUTION="trusty"
 
-SERVER_PACKAGES="serverd dummyd"
 PROJECTS="oslo.config oslo.messaging python-cinderclient python-novaclient python-swiftclient python-glanceclient python-neutronclient python-keystoneclient"
 BASEDIR=`pwd`;
 
@@ -68,37 +67,6 @@ do
 done
 
 #test -e $GITLOG || exit 2
-
-
-# Take each server daemon package and generate its listed in the control file
-# This package will only have an upstart job
-# This package should always depend on rjil-cicd
-
-# First have a pristine control file
-cat $BASEDIR/debian/control.in > $BASEDIR/debian/control
-
-for proj in $SERVER_PACKAGES;
-do
-	# Generate debian/control details
-	echo -en "\n\nPackage: $proj
-Architecture: all
-Depends: rjil-cicd
-Description: Binary upstart package: $proj
- Binary upstart package - $proj
- .
- This package should always depend on rjil-cicd\n\n" >> $DEBCONTROL
-
-
- 	# Dummy upstart jobs file
-	# When actual job files are shipped, this line should be deleted.
-	echo -en "Dummy $proj upstart job\n" > $BASEDIR/debian/$proj.upstart
-
-
-	# Generate install files
-	# For every server daemon package, autobuild repo should have an upstart job available
-	# echo -en "debian/$proj.upstart /etc/\n" > $BASEDIR/debian/$proj.install
-done
-
 
 # Create the changelog version first
 $DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"

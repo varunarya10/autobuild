@@ -13,27 +13,30 @@ Standards-Version: 3.9.2
 Package: rjil-cicd
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Provides: python-oslo.messaging,
+          python-oslo.config,
+          python-cinderclient,
+          python-novaclient,
+          python-swiftclient,
+          python-glanceclient,
+          python-neutronclient,
+          python-keystoneclient
+Replaces: python-oslo.messaging,
+          python-oslo.config,
+          python-cinderclient,
+          python-novaclient,
+          python-swiftclient,
+          python-glanceclient,
+          python-neutronclient,
+          python-keystoneclient
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
  * python-cincerclient
  * oslo.messaging
-
-
-Package: serverd
-Architecture: all
-Depends: rjil-cicd
-Description: Binary upstrat package: serverd
- Binary upstart package - serverd
- .
- This package should always depend on rjil-cicd
-
-
-
-Package: dummyd
-Architecture: all
-Depends: rjil-cicd
-Description: Binary upstrat package: dummyd
- Binary upstart package - dummyd
- .
- This package should always depend on rjil-cicd
+ * oslo.config
+ * python-novaclient
+ * python-swiftclient
+ * python-glanceclient
+ * python-neutronclient
+ * python-keystoneclient
 
