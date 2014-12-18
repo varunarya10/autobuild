@@ -11,13 +11,14 @@ DCH=`which dch`;
 DPKGBUILD=`which dpkg-buildpackage`;
 DISTRIBUTION="trusty"
 
-PROJECTS="oslo.config oslo.messaging python-cinderclient python-novaclient python-swiftclient python-glanceclient python-neutronclient python-keystoneclient"
+PROJECTS="$($REPO forall -c 'echo ${REPO_PROJECT}')"
 BASEDIR=`pwd`;
 
 DEBCONTROL="$BASEDIR/debian/control"
 MANIFEST="$BASEDIR/debian/manifest"
 OLD_MANIFEST="$BASEDIR/debian/manifest.old"
 GITLOG="$BASEDIR/debian/changelog.git"
+GITLOGTMP="${GITLOG}.tmp"
 
 VERSION="1:2014.2"
 
@@ -59,14 +60,25 @@ do
 		echo -en "$PROJ added at revison ${CUR_LOG}\n\n" >> $GITLOG;
 	elif [ "$CUR_LOG" != "$PREV_LOG" ]
 	then
-		cd $BASEDIR/$PROJ;
-		echo "${PROJ}:" >> $GITLOG;
-		$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' >> $GITLOG;
-		cd $BASEDIR;
+		if [ "$PROJ" == "autobuild" ]
+		then
+			$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' | grep -v '] Build number' > $GITLOGTMP;
+			if [ $(wc -l $GITLOGTMP | cut -f1 -d' ') -gt 0 ]
+			then
+				echo "Packaging:" >> $GITLOG;
+				cat $GITLOGTMP >> $GITLOG;
+				rm $GITLOGTMP
+			fi
+		else
+			cd $BASEDIR/$PROJ;
+			echo "${PROJ}:" >> $GITLOG;
+			$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' >> $GITLOG;
+			cd $BASEDIR;
+		fi
 	fi
 done
 
-#test -e $GITLOG || exit 2
+test -e $GITLOG || exit 2
 
 # Create the changelog version first
 $DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
