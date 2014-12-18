@@ -1,0 +1,9 @@
+python-oslo.messaging
+python-oslo.config
+python-cinderclient
+python-novaclient
+python-swiftclient
+python-glanceclient
+python-neutronclient
+python-keystoneclient
+python-ironic
