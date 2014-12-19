@@ -20,13 +20,13 @@ export SKIP_WRITE_GIT_CHANGELOG=1
 %:
 	dh $@ --with python2
 
-override_dh_auto_clean: debian/control
+override_dh_auto_clean: debian/symlinks debian/control
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_clean && cd ..; \
 	done
 
-override_dh_auto_build: debian/control
+override_dh_auto_build: debian/symlinks debian/control
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_build && cd ..; \
@@ -35,7 +35,7 @@ override_dh_auto_build: debian/control
 debian/rjil-cicd.substvars: 
 	python -c 'import sys;print "rjil:pkgs="+", ".join(sys.argv[1:])' $$(cat debian/superseded-packages) >> debian/rjil-cicd.substvars
 
-override_dh_auto_install: debian/control debian/rjil-cicd.substvars
+override_dh_auto_install: debian/symlinks debian/control debian/rjil-cicd.substvars
 	for PROJ in $(PROJECTS); \
 	do \
 		cd $${PROJ} && dh_auto_install && cd ..; \
@@ -47,4 +47,10 @@ debian/control: debian/control.stub debian/control.tmpl $(UPSTART_JOBS)
 		sed -e s@PKGNAME@$$s@g < debian/control.tmpl >> debian/control ; \
 	done
 
-.PHONY: debian/control debian/rjil-cicd.substvars
+debian/symlinks:
+	for proj in $(PROJECTS); \
+	do \
+		cd $${proj} && test -L debian || ln -s ../debian . && cd ..; \
+	done
+
+.PHONY: debian/control debian/rjil-cicd.substvars debian/symlinks
