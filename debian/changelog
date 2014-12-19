@@ -1,3 +1,74 @@
+rjil-cicd (1:2014.2.76) trusty; urgency=medium
+
+  * Automated build
+  * python-neutronclient:
+  *   [6913e3f] Merge "firewall policy update for a rule is not worki..
+  *   [4067a48] Merge "subnet: allow --enable-dhcp=False/True syntax,..
+  *   [04a0ec8] firewall policy update for a rule is not working
+  *   [fea8706] subnet: allow --enable-dhcp=False/True syntax, again
+  *   [3751afd] Merge "Use discovery fixture"
+  *   [12cbbcf] Merge "Cleanup copy and pasted token"
+  *   [e069b7d] Merge "Router create distributed accepts lower case"
+  *   [66612c9] Router create distributed accepts lower case
+  *   [89271b1] Add unit tests for agent related commands
+  *   [56892bb] Make help for agent-update more verbose
+  *   [19de15d] Merge "Updated from global requirements"
+  *   [c5d8557] Use discovery fixture
+  *   [497bb55] Cleanup copy and pasted token
+  *   [8a77718] fix the firewall rule arg split error
+  *   [a65f385] Updated from global requirements
+  *   [11deb7f] Merge "neutron port-list -f csv outputs poorly format..
+  *   [5067975] Merge "Fix mixed usage of _"
+  *   [de7bb1e] Merge "Disable name support for lb-healthmonitor-* co..
+  *   [4e88834] Merge "Don't allow update of ipv6-ra-mode and ipv6-ad..
+  *   [3bb51e3] Merge "Fixes neutronclient lb-member-show command"
+  *   [3ed2a5e] Disable name support for lb-healthmonitor-* commands
+  *   [02c108f] Fix mixed usage of _
+  *   [12a87f2] Fixes neutronclient lb-member-show command
+  *   [5d2bafa] neutron port-list -f csv outputs poorly formatted JSO..
+  *   [9ed73c0] Updated from global requirements
+  *   [81fe0c7] Don't allow update of ipv6-ra-mode and ipv6-address-m..
+  *   [c646818] Merge "Use graduated oslo libraries"
+  *   [c4223cf] Merge "Remove extraneous vim editor configuration com..
+  *   [1ac542c] Updated from global requirements
+  *   [9c464ba] Use graduated oslo libraries
+  *   [f8e2e42] Merge "Updated from global requirements"
+  *   [d046a95] Fix E113 hacking check
+  *   [64b2d8a] Fix E129 hacking check
+  *   [eae3211] Merge "Fix E128 hacking check"
+  *   [35dbc97] Merge "Bump hacking to 0.9.x series"
+  *   [d812227] Updated from global requirements
+  *   [72c1473] Merge "Add InvalidIpForNetworkClient exception"
+  *   [170f8ca] Merge "Leverage neutronclient.openstack.common.import..
+  *   [40c6172] Merge "Adds tty password entry for neutronclient"
+  *   [f333139] Merge "handles keyboard interrupt"
+  *   [09c3fcb] Merge "Correct 4xx/5xx response management in Session..
+  *   [b1af06a] Merge "Use six.moves cStringIO instead of cStringIO"
+  *   [b0af639] Merge "Change ipsecpolicies to 2 separate words: IPse..
+  *   [b3a49e9] Merge "Work toward Python 3.4 support and testing"
+  *   [e0bd71e] Merge "Change "healthmonitor" to "health monitor" in ..
+  *   [de4149e] Merge "Replace httpretty with requests_mock"
+  *   [2545846] Merge "Fix to ensure endpoint_type is used by make_cl..
+  *   [092e668] Add InvalidIpForNetworkClient exception
+  *   [0f7741d] Add missing parameters to Client's docstring
+  *   [72afc0f] Leverage neutronclient.openstack.common.importutils i..
+  *   [27f02ac] Remove extraneous vim editor configuration comments
+  *   [b5f629f] Merge "Don't get keystone session if using noauth"
+  *   [4d2133c] Fix E128 hacking check
+  *   [2eba58a] Don't get keystone session if using noauth
+  *   [c02e782] Bump hacking to 0.9.x series
+  *   [e3e0915] Change "healthmonitor" to "health monitor" in help info
+  *   [bb4a0dc] Correct 4xx/5xx response management in SessionClient
+  *   [0fedd33] Change ipsecpolicies to 2 separate words: IPsec polic..
+  *   [a1a8a0e] handles keyboard interrupt
+  *   [1ab4335] Use six.moves cStringIO instead of cStringIO
+  *   [8115c02] Updated from global requirements
+  *   [9d8ab0d] Replace httpretty with requests_mock
+  *   [a9ed96f] Fix to ensure endpoint_type is used by make_client()
+  *   [42731a2] Work toward Python 3.4 support and testing
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 19 Dec 2014 07:37:47 +0000
+
 rjil-cicd (1:2014.2.74) trusty; urgency=medium
 
   * Automated build
