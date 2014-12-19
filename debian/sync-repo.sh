@@ -48,6 +48,17 @@ test -e $GITLOG && rm $GITLOG
 
 for PROJ in $PROJECTS;
 do
+	if [ "$PROJ" == "autobuild" ]
+	then
+		# Do nothing;
+		echo "skip this folder for symlink";
+	else
+		# If no symlink is present, we create them before proceeds.
+		cd $BASEDIR/$PROJ;
+		test -L debian || ln -s ../debian debian
+		cd $BASEDIR;
+	fi
+
 	CUR_LOG=`cat $MANIFEST | grep ^$PROJ | cut -d ' ' -f2`;
 	PREV_LOG=`cat $OLD_MANIFEST | grep ^$PROJ | cut -d ' ' -f2`;
 
@@ -71,10 +82,6 @@ do
 			fi
 		else
 			cd $BASEDIR/$PROJ;
-
-			# If no symlink is present, we create them before proceeds.
-			test -L debian || ln -s ../debian debian
-
 			echo "${PROJ}:" >> $GITLOG;
 			$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' >> $GITLOG;
 			cd $BASEDIR;
