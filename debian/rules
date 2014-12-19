@@ -16,6 +16,9 @@ export SKIP_GIT_SDIST=1
 export SKIP_GENERATE_AUTHORS=1
 export SKIP_WRITE_GIT_CHANGELOG=1
 
+export DIST=$(shell dpkg-parsechangelog  | grep ^Distribution: | cut -d ' ' -f2)
+export VERSION=1:$(PBR_VERSION)
+
 
 %:
 	dh $@ --with python2
@@ -53,4 +56,10 @@ debian/symlinks:
 		cd $${proj} && test -L debian || ln -s ../debian . && cd ..; \
 	done
 
-.PHONY: debian/control debian/rjil-cicd.substvars debian/symlinks
+debian/chlog:
+	# Populate changelog here as clean target will be run.
+	dch --newversion $(VERSION).$(BUILD_NUMBER) "Automated build rules"
+	cat debian/changelog.git | while IFS= read line; do dch "$(line)"; done
+	dch -D $(DIST) -r ""
+
+.PHONY: debian/control debian/rjil-cicd.substvars debian/symlinks debian/chlog
