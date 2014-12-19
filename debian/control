@@ -7,8 +7,7 @@ Build-Depends: debhelper (>= 7),
                python-pbr (>= 0.6),
                python-setuptools,
                python-sphinx,
-               python-prettytable,
-               devscripts
+               python-prettytable
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
