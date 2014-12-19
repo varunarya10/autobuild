@@ -81,12 +81,12 @@ done
 test -e $GITLOG || exit 3
 
 # Create the changelog version first
-#$DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
+$DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
 
 # Now let's populate debian/changelog
-#cat $GITLOG | while IFS= read line; do $DCH "$line"; done
+cat $GITLOG | while IFS= read line; do $DCH "$line"; done
 
-#$DCH -D $DISTRIBUTION -r ""
+$DCH -D $DISTRIBUTION -r ""
 
 # Now let's (source) build it
 $DPKGBUILD -uc -us -S -I.repo -I.git
