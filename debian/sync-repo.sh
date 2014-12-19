@@ -78,7 +78,7 @@ do
 	fi
 done
 
-test -e $GITLOG || exit 2
+test -e $GITLOG || exit 3
 
 # Create the changelog version first
 #$DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
