@@ -1,3 +1,12 @@
+rjil-cicd (1:2014.2.85) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [24e2d32] Merge branch 'master' of github.com:JioCloud/autobuild
+  *   [e0a948c] Move symlinking into debian/rules
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 19 Dec 2014 10:33:21 +0000
+
 rjil-cicd (1:2014.2.83) trusty; urgency=medium
 
   * Automated build
