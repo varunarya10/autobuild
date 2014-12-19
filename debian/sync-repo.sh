@@ -73,7 +73,7 @@ do
 			cd $BASEDIR/$PROJ;
 
 			# If no symlink is present, we create them before proceeds.
-			test -L debian || ln -s $BASEDIR/debian debian
+			test -L debian || ln -s ../debian debian
 
 			echo "${PROJ}:" >> $GITLOG;
 			$GIT log $PREV_LOG..$CUR_LOG --pretty='format:  [%h] %<(55,trunc)%s' >> $GITLOG;
