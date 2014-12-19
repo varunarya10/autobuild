@@ -16,9 +16,6 @@ export SKIP_GIT_SDIST=1
 export SKIP_GENERATE_AUTHORS=1
 export SKIP_WRITE_GIT_CHANGELOG=1
 
-export DIST=$(shell dpkg-parsechangelog  | grep ^Distribution: | cut -d ' ' -f2)
-export VERSION=1:$(PBR_VERSION)
-
 
 %:
 	dh $@ --with python2
@@ -28,11 +25,6 @@ override_dh_auto_clean: debian/symlinks debian/control
 	do \
 		cd $${PROJ} && dh_auto_clean && cd ..; \
 	done
-
-	# Populate changelog here as clean target will be run.
-	dch --newversion $(VERSION).$(BUILD_NUMBER) "Automated build rules"
-	cat debian/changelog.git | while IFS= read line; do dch "$(line)"; done
-	dch -D $(DIST) -r ""
 
 override_dh_auto_build: debian/symlinks debian/control
 	for PROJ in $(PROJECTS); \
