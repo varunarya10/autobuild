@@ -1,3 +1,14 @@
+rjil-cicd (1:2014.2.81) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [cd89c87] Do the symlink test right in the beginning
+  *   [50a53c9] Give a relative path
+  *   [b5db264] Merge branch 'master' of github.com:JioCloud/autobuild
+  *   [c3436e6] Remove ironic/debian symlink, for test
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 19 Dec 2014 09:20:36 +0000
+
 rjil-cicd (1:2014.2.78) trusty; urgency=medium
 
   * Automated build
