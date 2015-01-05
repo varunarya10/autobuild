@@ -9,6 +9,9 @@ Build-Depends: debhelper (>= 7),
                python-sphinx,
                python-prettytable,
                python-dev,
+               python-flake8,
+               python-pytest,
+               python-unittest2,
                devscripts
 Standards-Version: 3.9.2
 
