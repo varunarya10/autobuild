@@ -78,7 +78,10 @@ do
 	fi
 done
 
-test -e $GITLOG || exit 3
+# Pass "build" as the arg and we'll skip Jenkins's autobuild
+if [ x$1 != "xbuild" ]; then
+       test -e $GITLOG || exit 3
+fi
 
 # Create the changelog version first
 $DCH --newversion $VERSION.$BUILD_NUMBER "Automated build"
