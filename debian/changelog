@@ -1,3 +1,35 @@
+rjil-cicd (1:2014.2.99) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [6c64c2f] Add build-deps for python-sendfile
+  *   [5992525] If $1 = "build", we force to create a source pacakge,..
+  *   [ede439e] Have the chlog target. Later, we'll use Jenkins to ca..
+  *   [3e1b5bf] Add python-dev to Build-Depends
+  *   [33109a4] rever back changes
+  *   [bd69b55] Revert back these changes. Will be handled through Je..
+  *   [210e41e] Add devscripts to Build-Depends, for dch
+  *   [39f8e53] Revert "Add devscripts to Build-Depends for dch"
+  *   [ee24a30] Add devscripts to Build-Depends for dch
+  *   [746f78f] Ref.. the correct variable
+  *   [1531e30] Same applies for DIST
+  *   [31d812f] We need to export it
+  *   [60e8ee4] Merge branch 'master' of github.com:JioCloud/autobuild
+  *   [8c0b97c] exit 3 in case of no change. exit 2 is used by make
+  *   [0f893b2] DISTRIBUTION and VERSION have to be handled by oursel..
+  *   [fbd781d] move changelog handling into debian/rules
+  * oslo.concurrency added at revison
+    f7ebc8260d235d474a3dc3135608fec216a4b04c
+  * oslo.db added at revison c6ddb04eb19bbd82fbd8dc692de2bffea8223268
+  * posix_ipc added at revison 222bfed59338f6415f40382798e59356fd9162b8
+  * keystonemiddleware added at revison
+    0bd661fcbb423b2225acc40131088da46969e574
+  * retrying added at revison 3659c70b1f0d0e4f3a262d6b76075a8eb082c73d
+  * pysendfile added at revison 6ebdf54ac2a1ba47026aca27296bbd63dcb38f94
+  * websockify added at revison 739af6ecb46e762793508ab59fede1f6b647e44e
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 06 Jan 2015 11:30:50 +0000
+
 rjil-cicd (1:2014.2.85) trusty; urgency=medium
 
   * Automated build
