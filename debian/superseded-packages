@@ -12,6 +12,5 @@ python-oslo.db
 python-oslo.messaging
 python-posix-ipc
 python-retrying
-python-sendfile
 python-swiftclient
 python-websockify
