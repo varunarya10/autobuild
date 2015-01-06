@@ -1,3 +1,11 @@
+rjil-cicd (1:2014.2.104) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [3fd2525] Stop superseding pysendfile. It's available from Debi..
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 06 Jan 2015 13:45:30 +0000
+
 rjil-cicd (1:2014.2.102) trusty; urgency=medium
 
   * Automated build
