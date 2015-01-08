@@ -14,3 +14,4 @@ python-posix-ipc
 python-retrying
 python-swiftclient
 python-websockify
+python-proliantutils
