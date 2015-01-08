@@ -30,9 +30,7 @@ override_dh_auto_build: debian/control $(patsubst %,build/%,$(PROJECTS))
 override_dh_auto_install: debian/control $(patsubst %,install/%,$(PROJECTS))
 
 clean/%: %/debian
-	pwd
 	cd $* && dh_auto_clean
-	pwd
 
 build/%: %/debian
 	cd $* && dh_auto_build
