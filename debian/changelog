@@ -1,3 +1,13 @@
+rjil-cicd (1:2014.2.106) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [b7f8a2b] Added proliantutils to superseded-packages
+  * proliantutils added at revison
+    1fb02bc45beda7dd9ec7adad5345bf4e90a72ed7
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 08 Jan 2015 08:45:24 +0000
+
 rjil-cicd (1:2014.2.104) trusty; urgency=medium
 
   * Automated build
