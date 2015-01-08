@@ -41,10 +41,7 @@ install/%: %/debian
 %/debian:
 	ln -s ../debian $@
 
-debian/rjil-cicd.substvars: 
-	python -c 'import sys;print "rjil:pkgs="+", ".join(sys.argv[1:])' $$(cat debian/superseded-packages) >> debian/rjil-cicd.substvars
-
-debian/control: debian/control.stub $(patsubst %,debian/%.control,$(SERVERS))
+debian/control: debian/control.stub $(patsubst %,debian/%.control,$(SERVERS) $(shell cat debian/superseded-packages))
 	cat $^ > $@
 
 debian/%.control: debian/control.tmpl

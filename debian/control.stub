@@ -9,18 +9,11 @@ Build-Depends: debhelper (>= 7),
                python-sphinx,
                python-prettytable,
                python-dev,
-               python-flake8,
-               python-pytest,
-               python-unittest2,
-               devscripts
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
-Provides: ${rjil:pkgs}
-Conflicts: ${rjil:pkgs}
-Replaces: ${rjil:pkgs}
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
  * python-cincerclient
