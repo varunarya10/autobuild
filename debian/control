@@ -9,18 +9,14 @@ Build-Depends: debhelper (>= 7),
                python-sphinx,
                python-prettytable,
                python-dev,
-               python-flake8,
-               python-pytest,
-               python-unittest2,
-               devscripts
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
-Provides: ${rjil:pkgs}
-Conflicts: ${rjil:pkgs}
-Replaces: ${rjil:pkgs}
+#Provides: ${rjil:pkgs}
+#Conflicts: ${rjil:pkgs}
+#Replaces: ${rjil:pkgs}
 Description: Monolithic OpenStack deb package
  This is a monolithic deb package comprising of the following openstack modules
  * python-cincerclient
@@ -34,13 +30,115 @@ Description: Monolithic OpenStack deb package
 
 Package: ironic-api
 Architecture: all
-Depends: rjil-cicd
-Description: ironic-api server package
- Automatically generated server package for ironic-api
+Depends: rjil-cicd (=${binary:Version})
+Description: ironic-api package
+ Automatically generated ironic-api package
 
 Package: ironic-conductor
 Architecture: all
-Depends: rjil-cicd
-Description: ironic-conductor server package
- Automatically generated server package for ironic-conductor
+Depends: rjil-cicd (=${binary:Version})
+Description: ironic-conductor package
+ Automatically generated ironic-conductor package
+
+Package: ironic-common
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: ironic-common package
+ Automatically generated ironic-common package
+
+Package: python-cinderclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-cinderclient package
+ Automatically generated python-cinderclient package
+
+Package: python-glanceclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-glanceclient package
+ Automatically generated python-glanceclient package
+
+Package: python-ironic
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-ironic package
+ Automatically generated python-ironic package
+
+Package: python-keystoneclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-keystoneclient package
+ Automatically generated python-keystoneclient package
+
+Package: python-keystonemiddleware
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-keystonemiddleware package
+ Automatically generated python-keystonemiddleware package
+
+Package: python-neutronclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-neutronclient package
+ Automatically generated python-neutronclient package
+
+Package: python-novaclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-novaclient package
+ Automatically generated python-novaclient package
+
+Package: python-oslo.concurrency
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.concurrency package
+ Automatically generated python-oslo.concurrency package
+
+Package: python-oslo.config
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.config package
+ Automatically generated python-oslo.config package
+
+Package: python-oslo.db
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.db package
+ Automatically generated python-oslo.db package
+
+Package: python-oslo.messaging
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.messaging package
+ Automatically generated python-oslo.messaging package
+
+Package: python-posix-ipc
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-posix-ipc package
+ Automatically generated python-posix-ipc package
+
+Package: python-retrying
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-retrying package
+ Automatically generated python-retrying package
+
+Package: python-swiftclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-swiftclient package
+ Automatically generated python-swiftclient package
+
+Package: python-websockify
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-websockify package
+ Automatically generated python-websockify package
+
+Package: python-proliantutils
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-proliantutils package
+ Automatically generated python-proliantutils package
 
