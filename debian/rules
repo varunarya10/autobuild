@@ -53,4 +53,4 @@ debian/chlog:
 	cat debian/changelog.git | while IFS= read line; do dch "$(line)"; done
 	dch -D $(DIST) -r ""
 
-.PHONY: debian/control debian/rjil-cicd.substvars debian/chlog $(patsubst %,clean/%,$(PROJECTS)) $(patsubst %,build/%,$(PROJECTS)) $(patsubst %,install/%,$(PROJECTS)) 
+.PHONY: debian/control debian/rjil-cicd.substvars debian/chlog
