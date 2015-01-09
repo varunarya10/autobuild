@@ -1,3 +1,19 @@
+rjil-cicd (1:2014.2.109) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [55b190c] Remove install/%, build/% and clean/% from .PHONY
+  *   [d7eeb50] Make the dependency on rjil-cicd versioned
+  *   [b0006c5] Merge pull request #8 from sorenh/build-rather-than-c..
+  *   [7a49d05] Merge pull request #7 from sorenh/use-it-as-a-makefile
+  *   [7c39dd2] Actually build the superseded packages
+  *   [4a03a6e] Also make control building prettier
+  *   [d495900] Remove debugging code
+  *   [f2836c8] Remove mention of debian/symlinks
+  *   [ef5bbd1] Make better use of the fact that this is a Makefile
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 09 Jan 2015 10:19:12 +0000
+
 rjil-cicd (1:2014.2.106) trusty; urgency=medium
 
   * Automated build
