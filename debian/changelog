@@ -1,3 +1,10 @@
+rjil-cicd (1:2014.2.116) trusty; urgency=medium
+
+  * Automated build
+  * oslo.db:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 07:51:36 +0000
+
 rjil-cicd (1:2014.2.114) trusty; urgency=medium
 
   * Automated build
