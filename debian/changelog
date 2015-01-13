@@ -1,3 +1,14 @@
+rjil-cicd (1:2014.2.114) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [c341bf0] Fix typo
+  *   [a5c73ee] Build python-tempest_lib package
+  * tempest-lib added at revison
+    87c1442469e76e338ee7eb0606e7e8caa525e056
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 05:04:50 +0000
+
 rjil-cicd (1:2014.2.111) trusty; urgency=medium
 
   * Automated build

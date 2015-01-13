@@ -115,6 +115,12 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-posix-ipc package
  Automatically generated python-posix-ipc package
 
+Package: python-proliantutils
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-proliantutils package
+ Automatically generated python-proliantutils package
+
 Package: python-retrying
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
@@ -127,15 +133,15 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-swiftclient package
  Automatically generated python-swiftclient package
 
+Package: python-tempest-lib
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-tempest-lib package
+ Automatically generated python-tempest-lib package
+
 Package: python-websockify
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
 Description: python-websockify package
  Automatically generated python-websockify package
-
-Package: python-proliantutils
-Architecture: all
-Depends: rjil-cicd (=${binary:Version})
-Description: python-proliantutils package
- Automatically generated python-proliantutils package
 
