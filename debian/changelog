@@ -1,3 +1,21 @@
+rjil-cicd (1:2014.2.123) trusty; urgency=medium
+
+  * Automated build
+  * python-glanceclient:
+  *   [695dbc9] Merge "Don't replace the https handler in the poolman..
+  *   [052904b] Don't replace the https handler in the poolmanager
+  *   [cfe0623] Merge "Adds support for Glance Tasks calls"
+  *   [1781c5d] Merge "Stop using intersphinx"
+  *   [498bdff] Merge "Remove network_utils"
+  *   [64eb97a] Merge "Default to system CA bundle if no CA certifica..
+  *   [5f4966d] Remove network_utils
+  *   [a23a364] Merge "Skip non-base properties in patch method"
+  *   [2b567cf] Skip non-base properties in patch method
+  *   [7ef1b7c] Adds support for Glance Tasks calls
+  *   [ab07caf] Stop using intersphinx
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 13:00:22 +0000
+
 rjil-cicd (1:2014.2.121) trusty; urgency=medium
 
   * Automated build
