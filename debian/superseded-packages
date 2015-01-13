@@ -14,5 +14,5 @@ python-posix-ipc
 python-proliantutils
 python-retrying
 python-swiftclient
-python-tempest_lib
+python-tempest-lib
 python-websockify
