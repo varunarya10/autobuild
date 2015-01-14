@@ -1,3 +1,60 @@
+rjil-cicd (1:2014.2.123) trusty; urgency=medium
+
+  * Automated build
+  * python-glanceclient:
+  *   [695dbc9] Merge "Don't replace the https handler in the poolman..
+  *   [052904b] Don't replace the https handler in the poolmanager
+  *   [cfe0623] Merge "Adds support for Glance Tasks calls"
+  *   [1781c5d] Merge "Stop using intersphinx"
+  *   [498bdff] Merge "Remove network_utils"
+  *   [64eb97a] Merge "Default to system CA bundle if no CA certifica..
+  *   [5f4966d] Remove network_utils
+  *   [a23a364] Merge "Skip non-base properties in patch method"
+  *   [2b567cf] Skip non-base properties in patch method
+  *   [7ef1b7c] Adds support for Glance Tasks calls
+  *   [ab07caf] Stop using intersphinx
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 13:00:22 +0000
+
+rjil-cicd (1:2014.2.121) trusty; urgency=medium
+
+  * Automated build
+  * ironic:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 12:19:44 +0000
+
+rjil-cicd (1:2014.2.119) trusty; urgency=medium
+
+  * Automated build
+  * ironic:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 11:28:56 +0000
+
+rjil-cicd (1:2014.2.118) trusty; urgency=medium
+
+  * Automated build
+  * ironic:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 11:21:43 +0000
+
+rjil-cicd (1:2014.2.116) trusty; urgency=medium
+
+  * Automated build
+  * oslo.db:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 07:51:36 +0000
+
+rjil-cicd (1:2014.2.114) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [c341bf0] Fix typo
+  *   [a5c73ee] Build python-tempest_lib package
+  * tempest-lib added at revison
+    87c1442469e76e338ee7eb0606e7e8caa525e056
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 13 Jan 2015 05:04:50 +0000
+
 rjil-cicd (1:2014.2.111) trusty; urgency=medium
 
   * Automated build

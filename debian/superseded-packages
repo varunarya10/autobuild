@@ -11,8 +11,9 @@ python-oslo.config
 python-oslo.db
 python-oslo.messaging
 python-posix-ipc
+python-proliantutils
 python-retrying
 python-swiftclient
+python-tempest-lib
 python-websockify
-python-proliantutils
 python-stevedore
