@@ -1,3 +1,13 @@
+rjil-cicd (1:2014.2.125) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [9847265] Merge branch 'master' of github.com:JioCloud/autobuild
+  *   [beaf12f] Add stevedore to rjil-cicd
+  * stevedore added at revison 55f05c84d04c7afadb82c898f743e3a60d964cc8
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Wed, 14 Jan 2015 13:52:40 +0000
+
 rjil-cicd (1:2014.2.123) trusty; urgency=medium
 
   * Automated build
