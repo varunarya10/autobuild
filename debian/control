@@ -139,3 +139,9 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-proliantutils package
  Automatically generated python-proliantutils package
 
+Package: python-stevedore
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-stevedore package
+ Automatically generated python-stevedore package
+
