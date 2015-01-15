@@ -1,3 +1,11 @@
+rjil-cicd (1:2014.2.135) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [8ac651f] Also install files in /etc
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 15 Jan 2015 16:33:06 +0000
+
 rjil-cicd (1:2014.2.133) trusty; urgency=medium
 
   * Automated build
