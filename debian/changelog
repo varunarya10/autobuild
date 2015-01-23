@@ -1,3 +1,13 @@
+rjil-cicd (1:2014.2.137) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [d125b52] Add ironicclient to superseded-packages
+  * python-ironicclient added at revison
+    16ff4e5852ad9f38b932f411c24217fd3902c485
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 23 Jan 2015 08:57:39 +0000
+
 rjil-cicd (1:2014.2.135) trusty; urgency=medium
 
   * Automated build

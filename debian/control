@@ -61,6 +61,12 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-ironic package
  Automatically generated python-ironic package
 
+Package: python-ironicclient
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-ironicclient package
+ Automatically generated python-ironicclient package
+
 Package: python-keystoneclient
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
