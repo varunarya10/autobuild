@@ -2,6 +2,7 @@ ironic-common
 python-cinderclient
 python-glanceclient
 python-ironic
+python-ironicclient
 python-keystoneclient
 python-keystonemiddleware
 python-neutronclient
