@@ -1,3 +1,46 @@
+rjil-cicd (1:2014.2.141) trusty; urgency=medium
+
+  * Automated build
+  * stevedore:
+  *   [549fa83] ignore .testrepository directory created by testr
+  *   [554bd47] clean up default environments run by tox
+  *   [37c94cd] Use pkg_resources resolve() and require() instead of ..
+  *   [9324bf0] Fix the README.rst file format for pypi
+  *   [6462f16] Merge "Implement a __contains__ override for extensio..
+  *   [6027ff6] Workflow documentation is now in infra-manual
+  *   [bbafbe9] Implement a __contains__ override for extension manager
+  *   [f33adbe] Update link to docs in README
+  *   [a322d61] Bring doc build up to standard
+  *   [5749d54] Add pbr to dependency list
+  *   [bb43bc4] Updated from global requirements
+  *   [82fa318] Add more detail to the README
+  *   [4f2b647] Migrate tox to use testr
+  *   [4a410fe] Update repository location in docs
+  *   [55c8801] Merge "warn against sorting requirements"
+  *   [aef7b30] Merge "Work toward Python 3.4 support and testing"
+  *   [860bd8f] Build universal wheels
+  *   [e28939f] Work toward Python 3.4 support and testing
+  *   [9817db0] warn against sorting requirements
+  *   [d37b47f] Merge "Updated from global requirements"
+  *   [bc2d08a] Updated from global requirements
+  *   [e8e9ca1] Fix incorrect image reference in documentation
+  *   [d39ef75] Fix requirement handling in tox
+  *   [65fc0d2] Merge "use six.add_metaclass"
+  *   [58ff35c] Updated from global requirements
+  *   [d9d11fc] use six.add_metaclass
+  *   [a0721b4] Merge "fix link to entry point docs"
+  *   [ff1f0fd] Merge "Updated from global requirements"
+  *   [53b4231] Merge "Add doc requirements to venv environ"
+  *   [d5fb7a8] Updated from global requirements
+  *   [3668de2] driver: raise by default on import failure
+  *   [6a37e5f] Add doc requirements to venv environ
+  *   [cde4b1d] Merge "Import run_cross_tests.sh from oslo-incubator"
+  *   [f2af694] Import run_cross_tests.sh from oslo-incubator
+  *   [9ae8bef] fix link to entry point docs
+  *   [2bbf3eb] Only log error when no load handler is set
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 29 Jan 2015 11:45:08 +0000
+
 rjil-cicd (1:2014.2.140) trusty; urgency=medium
 
   * Automated build
