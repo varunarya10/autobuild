@@ -1,3 +1,23 @@
+rjil-cicd (1:2014.2.140) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [4927e4d] Fix typo: clien => client
+  *   [ffd91e2] Merge "Fix migrate_from_tempest script to work with m..
+  *   [3efd9ac] Merge "Update base.py to include python-openstackclie..
+  *   [5b807bf] Merge "Make rest_client exception inheritances easy"
+  *   [ddd942e] Merge "Remove unused exceptions"
+  *   [38f3fc0] Merge "Add RateLimitExceeded test case"
+  *   [ebd5ed6] Make rest_client exception inheritances easy
+  *   [26828cc] Remove unused exceptions
+  *   [9018af6] Add RateLimitExceeded test case
+  *   [c473cda] Fix migrate_from_tempest script to work with multiple..
+  *   [efb491b] Updated from global requirements
+  *   [84dee6b] Migrate rest_client to tempest-lib from tempest
+  *   [d588748] Default the worker number to 0 not NaN
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 29 Jan 2015 11:30:03 +0000
+
 rjil-cicd (1:2014.2.137) trusty; urgency=medium
 
   * Automated build
