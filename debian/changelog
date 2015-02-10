@@ -1,3 +1,11 @@
+rjil-cicd (1:2014.2.143) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [d6e4d17] Merge pull request #2 from afaheem88/master
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 10 Feb 2015 09:44:25 +0000
+
 rjil-cicd (1:2014.2.141) trusty; urgency=medium
 
   * Automated build
