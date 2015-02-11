@@ -1,3 +1,16 @@
+rjil-cicd (1:2014.2.145) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [c5e9dff] Merge branch 'master' of https://github.com/openstack..
+  *   [c70c26d] Merge "Move api_version to a class value"
+  *   [81cb1cc] Merge "Migrate the skip_because decorator from tempest"
+  *   [a9f71e5] Merge "Separate Forbidden exception from Unauthorized"
+  *   [0ff7d27] Migrate the skip_because decorator from tempest
+  *   [d817a03] Move api_version to a class value
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Wed, 11 Feb 2015 05:29:26 +0000
+
 rjil-cicd (1:2014.2.143) trusty; urgency=medium
 
   * Automated build
