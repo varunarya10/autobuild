@@ -1,3 +1,17 @@
+rjil-cicd (1:2014.2.147) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [3a54fcf] Merge branch 'master' of https://github.com/openstack..
+  *   [bd6d154] Move data_utils functionaly from tempest.
+  *   [a6ff3bf] Merge "Switch to using oslo.log from library"
+  *   [d7c3f6b] Merge "Summarize expected failures"
+  *   [e29ec71] Summarize expected failures
+  *   [2929896] Improve the library's documentation
+  *   [21e3f6a] Enable stdout passthrough for subunit-trace
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Sun, 22 Feb 2015 10:59:10 +0000
+
 rjil-cicd (1:2014.2.145) trusty; urgency=medium
 
   * Automated build
