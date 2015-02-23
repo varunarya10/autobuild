@@ -10,6 +10,7 @@ python-novaclient
 python-oslo.concurrency
 python-oslo.config
 python-oslo.db
+python-oslo.log
 python-oslo.messaging
 python-posix-ipc
 python-proliantutils
