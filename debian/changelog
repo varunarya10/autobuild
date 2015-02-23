@@ -1,3 +1,13 @@
+rjil-cicd (1:2014.2.151) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [866dbd3] Add python-oslo.context
+  * oslo.context added at revison
+    205479f254e2bc90c0c142f1f75df500ae94f916
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 23 Feb 2015 09:27:04 +0000
+
 rjil-cicd (1:2014.2.149) trusty; urgency=medium
 
   * Automated build
