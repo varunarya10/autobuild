@@ -109,6 +109,12 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-oslo.db package
  Automatically generated python-oslo.db package
 
+Package: python-oslo.log
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.log package
+ Automatically generated python-oslo.log package
+
 Package: python-oslo.messaging
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})

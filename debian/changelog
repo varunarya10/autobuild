@@ -1,3 +1,12 @@
+rjil-cicd (1:2014.2.149) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [7694906] Add python-oslo.log
+  * oslo.log added at revison 5139941a0c8d63ae33421a2082e35fae0f800b67
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 23 Feb 2015 09:12:49 +0000
+
 rjil-cicd (1:2014.2.147) trusty; urgency=medium
 
   * Automated build
