@@ -1,3 +1,14 @@
+rjil-cicd (1:2014.2.153) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [5550664] Merge branch 'master' of https://github.com/openstack..
+  *   [e8be46f] Always print info logs from the rest client requests
+  *   [4c4d34b] Handle missing launchpadlib gracefully
+  *   [aa74d0f] Merge "Migrate skip_tracker.py from tempest"
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 12 Mar 2015 07:17:57 +0000
+
 rjil-cicd (1:2014.2.151) trusty; urgency=medium
 
   * Automated build
