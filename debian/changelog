@@ -1,3 +1,32 @@
+rjil-cicd (1:2014.2.155) trusty; urgency=medium
+
+  * Automated build
+  * oslo.concurrency:
+  *   [4144276] Switch to non-namespaced module imports
+  *   [c8bdd76] Remove py33 env from default tox list
+  *   [e33e558] Add lockutils.get_lock_path() function
+  *   [1788e07] Imported Translations from Transifex
+  *   [5cee4c7] Updated from global requirements
+  *   [875946e] Updated from global requirements
+  *   [2c0ad1f] processutils: execute(): fix option incompatibility
+  *   [45f99e7] Ability to set working directory
+  *   [88788c2] Add eventlet test check to new tests __init__.py
+  *   [23343f0] Drop use of namespaced oslo.i18n
+  *   [56ed436] Updated from global requirements
+  *   [bd2daac] Updated from global requirements
+  *   [fd7eed7] Update Oslo imports to remove namespace package
+  *   [a8b8486] Revert "Port processutils to Python 3"
+  *   [c4d62f8] Bump to hacking 0.10
+  *   [ef9bc7f] Updated from global requirements
+  *   [ad72925] add watchdog module
+  *   [d467c8f] Updated from global requirements
+  *   [ea15731] make time format for processutils match lockutils
+  *   [7165530] Correct the translation domain for loading messages
+  *   [0d4f0ba] Add a reader/writer lock
+  *   [6b83e29] Report import warnings where the import occurs
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 13 Mar 2015 08:18:04 +0000
+
 rjil-cicd (1:2014.2.153) trusty; urgency=medium
 
   * Automated build
