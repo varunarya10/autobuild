@@ -25,7 +25,7 @@ export VERSION=1:$(PBR_VERSION)
 
 override_dh_auto_clean: debian/control $(patsubst %,clean/%,$(PROJECTS))
 
-override_dh_auto_build: debian/control $(patsubst %,build/%,$(PROJECTS))
+override_dh_auto_build: debian/control $(patsubst %,build/%,$(PROJECTS)) debian/rjil-cicd.substvars
 
 override_dh_auto_install: debian/control $(patsubst %,install/%,$(PROJECTS))
 
@@ -40,6 +40,9 @@ install/%: %/debian
 
 %/debian:
 	ln -s ../debian $@
+
+debian/rjil-cicd.substvars:
+	python -c 'import sys;print "rjil:pkgs="+", ".join(sys.argv[1:])' $$(cat debian/superseded-packages) >> debian/rjil-cicd.substvars
 
 debian/control: debian/control.stub $(patsubst %,debian/%.control,$(SERVERS) $(shell cat debian/superseded-packages))
 	cat $^ > $@
