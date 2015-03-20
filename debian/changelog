@@ -1,3 +1,11 @@
+rjil-cicd (1:2014.2.161) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [fb26ad0] Move substvar generation after build
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 20 Mar 2015 10:53:36 +0000
+
 rjil-cicd (1:2014.2.159) trusty; urgency=medium
 
   * Automated build
