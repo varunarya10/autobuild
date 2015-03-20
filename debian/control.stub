@@ -13,7 +13,6 @@ Standards-Version: 3.9.2
 
 Package: rjil-cicd
 Architecture: all
-Conflicts: ${rjil:pkgs}
 Replaces: ${rjil:pkgs}
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: Monolithic OpenStack deb package
