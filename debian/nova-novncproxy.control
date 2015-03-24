@@ -1,0 +1,6 @@
+Package: nova-novncproxy
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-novncproxy package
+ Automatically generated nova-novncproxy package
+

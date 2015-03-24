@@ -1,0 +1,6 @@
+Package: nova-api-ec2
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-api-ec2 package
+ Automatically generated nova-api-ec2 package
+

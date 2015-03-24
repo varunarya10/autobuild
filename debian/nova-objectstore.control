@@ -1,0 +1,6 @@
+Package: nova-objectstore
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-objectstore package
+ Automatically generated nova-objectstore package
+

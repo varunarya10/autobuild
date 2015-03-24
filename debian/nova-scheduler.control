@@ -1,0 +1,6 @@
+Package: nova-scheduler
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-scheduler package
+ Automatically generated nova-scheduler package
+

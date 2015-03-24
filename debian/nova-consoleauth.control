@@ -1,0 +1,6 @@
+Package: nova-consoleauth
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-consoleauth package
+ Automatically generated nova-consoleauth package
+

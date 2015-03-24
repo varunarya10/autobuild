@@ -1,0 +1,6 @@
+Package: nova-api-os-compute
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-api-os-compute package
+ Automatically generated nova-api-os-compute package
+
