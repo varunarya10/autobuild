@@ -1,0 +1,6 @@
+Package: nova-conductor
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-conductor package
+ Automatically generated nova-conductor package
+

@@ -1,0 +1,6 @@
+Package: nova-api-metadata
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-api-metadata package
+ Automatically generated nova-api-metadata package
+

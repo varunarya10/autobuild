@@ -1,0 +1,6 @@
+Package: nova-xvpncproxy
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-xvpncproxy package
+ Automatically generated nova-xvpncproxy package
+

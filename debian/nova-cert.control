@@ -1,0 +1,6 @@
+Package: nova-cert
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-cert package
+ Automatically generated nova-cert package
+

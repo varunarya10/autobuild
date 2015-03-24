@@ -1,0 +1,6 @@
+Package: nova-baremetal
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-baremetal package
+ Automatically generated nova-baremetal package
+

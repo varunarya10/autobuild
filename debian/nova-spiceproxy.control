@@ -1,0 +1,6 @@
+Package: nova-spiceproxy
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-spiceproxy package
+ Automatically generated nova-spiceproxy package
+

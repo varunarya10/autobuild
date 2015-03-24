@@ -1,0 +1,6 @@
+Package: nova-network
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-network package
+ Automatically generated nova-network package
+

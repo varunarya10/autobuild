@@ -1,0 +1,6 @@
+Package: nova-console
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-console package
+ Automatically generated nova-console package
+

@@ -1,0 +1,6 @@
+Package: nova-cells
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: nova-cells package
+ Automatically generated nova-cells package
+
