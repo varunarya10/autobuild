@@ -1,0 +1,10 @@
+description "Glance API server"
+author "Ritesh Raj Sarraf <Ritesh.Sarraf@ril.com>"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+exec start-stop-daemon --start --chuid glance --chdir /var/lib/glance --name glance-api --exec /usr/bin/glance-api
+

@@ -1,4 +1,8 @@
+glance-api
+glance-common
+glance-registry
 ironic-common
+keystone
 python-cinderclient
 python-glanceclient
 python-ironic

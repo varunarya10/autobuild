@@ -1,0 +1,9 @@
+description "Keystone API server"
+author "Ritesh Raj Sarraf <ritesh.sarraf@ril.com>
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+exec start-stop-daemon --start --chuid keystone --chdir /var/lib/keystone --name keystone --exec /usr/bin/keystone-all
