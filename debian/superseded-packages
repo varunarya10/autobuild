@@ -7,7 +7,6 @@ nova-api-ec2
 nova-api-metadata
 nova-api-os-compute
 nova-api
-nova-baremetal
 nova-cells
 nova-cert
 nova-compute
