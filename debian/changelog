@@ -1,3 +1,38 @@
+rjil-cicd (1:2014.2.170) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [fadbd3a] Merge remote-tracking branch 'upstream/master'
+  *   [7e4dcf7] Merge "Add docstrings to data_utils"
+  *   [356a664] Merge "Add unit tests for properties of rest_client"
+  *   [efdce40] Add docstrings to data_utils
+  *   [88d5d61] Add unit tests for properties of rest_client
+  *   [d7c15b8] Add a unit test for get_versions()
+  *   [c46441a] Merge "Fix docstring for rest_client module"
+  *   [28aac6b] Merge "Migrated test_credentials.py to tempest-lib"
+  *   [fc92864] Add unit tests for __str__ method of ResponseBody* cl..
+  *   [70bbbd5] Merge "Add a unit test for get_ipv6_addr_by_EUI64"
+  *   [ae3d878] Migrated test_credentials.py to tempest-lib
+  *   [3ff65f7] Fix docstring for rest_client module
+  *   [f4b8c6f] Add a test case for rand_name with prefix
+  *   [4988215] Add a unit test for get_ipv6_addr_by_EUI64
+  *   [32369db] Merge "Add test cases for random utilities"
+  *   [c01fe63] Merge "Fix an error of tox -ecover"
+  *   [c20857c] Merge "Add optional prefix parameter to rand_name fun..
+  *   [a4f8089] Add test cases for random utilities
+  *   [8d3b72f] Fix an error of tox -ecover
+  *   [4a2cd42] Add optional prefix parameter to rand_name function
+  *   [4558df5] Updated from global requirements
+  *   [426d031] Add InvalidCredentials to tempest-lib
+  *   [5e02b8b] Migrated auth.py and related unit tests from tempest
+  *   [ed27340] Support specifying the tempest git URL
+  *   [59b3f34] Migrate token clients to tempest-lib
+  *   [5512c43] Merge "Add api docs to the rest client"
+  *   [39b10c6] Merge "Updated from global requirements"
+  *   [0a571c6] Add api docs to the rest client
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 03 Apr 2015 04:32:29 +0000
+
 rjil-cicd (1:2014.2.163) trusty; urgency=medium
 
   * Automated build
