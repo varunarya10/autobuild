@@ -3,13 +3,19 @@
 
 # NOTICE: Should be run from repo's root dir.
 
+DISTRIBUTION="trusty"
 
 # Binaries
 GIT=`which git`;
 REPO=`which repo`;
 DCH=`which dch`;
 DPKGBUILD=`which dpkg-buildpackage`;
-DISTRIBUTION="trusty"
+SUDO=`which sudo`;
+
+BUILDER=`which pbuilder`;
+BUILDER_OPTS="--build ";
+#BUILDER=`which sbuild`;
+#BUILDER_OPTS="-n -d $DISTRIBUTION -A ";
 
 PROJECTS="$($REPO forall -c 'echo ${REPO_PROJECT}')"
 BASEDIR=`pwd`;
@@ -80,7 +86,12 @@ done
 
 # Pass "build" as the arg and we'll skip Jenkins's autobuild
 if [ x$1 != "xbuild" ]; then
+	
        test -e $GITLOG || exit 3
+else
+	# Make sure our local dev builds are always greater than jenkins'
+	VERSION="2:2014.2";
+	BUILD_NUMBER=`date +%s`;
 fi
 
 # Create the changelog version first
@@ -93,4 +104,26 @@ $DCH -D $DISTRIBUTION -r ""
 
 # Now let's (source) build it
 $DPKGBUILD -uc -us -S -I.repo -I.git
+
+# Again, if we are local build, call sbuild/pbuilder locally
+if [ x$1 == "xbuild" ]; then
+	MYID=`id -u`;
+	if [ $MYID -eq 0 ]; then
+		$BUILDER --build ../rjil-cicd*$BUILD_NUMBER*.dsc
+	else
+		$SUDO $BUILDER --build ../rjil-cicd*$BUILD_NUMBER*.dsc
+	fi
+
+	test -d ../localdebs && rm -rf ../localdebs
+	mkdir ../localdebs
+	# Fix this because it is hard coded, for now, to look at my local pbuilder Results location
+	mv /var/tmp/Debian-Build/Result/*$BUILD_NUMBER*.deb ../localdebs
+
+	apt-ftparchive packages ../localdebs/ > ../localdebs/Packages;
+	tar -cavf ../localdebs-$BUILD_NUMBER.tar ../localdebs/
+
+	if [ $? -eq 0 ]; then
+		echo "Successfully created archive ../localdebs-$BUILD_NUMBER.tar";
+	fi
+fi
 
