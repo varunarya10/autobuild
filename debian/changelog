@@ -1,3 +1,16 @@
+rjil-cicd (1:2014.2.172) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [d4a677b] Merge remote-tracking branch 'upstream/master'
+  *   [0b50366] Merge "Migrate ssh.py from tempest"
+  *   [9f5ff08] Migrate ssh.py from tempest
+  *   [5b7a6f5] Merge "Add a unit test for __str__() of rest_client"
+  *   [71093e4] Merge "Move to hacking 0.10"
+  *   [bbfee4d] Add a unit test for __str__() of rest_client
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 21 Apr 2015 08:01:42 +0000
+
 rjil-cicd (1:2014.2.170) trusty; urgency=medium
 
   * Automated build
