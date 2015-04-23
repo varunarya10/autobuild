@@ -98,6 +98,18 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-oslo.concurrency package
  Automatically generated python-oslo.concurrency package
 
+Package: python-oslo-config
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-config package
+ Automatically generated python-oslo-config package
+
+Package: python-oslo-context
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-context package
+ Automatically generated python-oslo-context package
+
 Package: python-oslo.config
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
