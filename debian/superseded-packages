@@ -8,6 +8,8 @@ python-keystonemiddleware
 python-neutronclient
 python-novaclient
 python-oslo.concurrency
+python-oslo-config
+python-oslo-context
 python-oslo.config
 python-oslo.context
 python-oslo.db
