@@ -1,3 +1,57 @@
+rjil-cicd (1:2014.2.176) trusty; urgency=medium
+
+  * Automated build
+  * oslo.config:
+  *   [2e32e58] Uncap library requirements for liberty
+  *   [3ab4039] Merge "Added Raw Value Loading to Test Fixture"
+  *   [ec4b6a6] Merge "Generate docs for constructor"
+  *   [ef72ab4] Merge "Fix doc build warning"
+  *   [e9fb0ba] Merge "Add deprecated_for_removal support to the conf..
+  *   [e30131a] Added Raw Value Loading to Test Fixture
+  *   [cc14a30] Add pypi download + version badges
+  *   [1e9033a] Update hacking to kilo level
+  *   [abe1727] Add deprecated_for_removal support to the config gene..
+  *   [aa0a08b] Generate docs for constructor
+  *   [2761029] Fix doc build warning
+  *   [5a71eed] Merge "Expand and clean up documentation for the conf..
+  *   [e2d800d] Merge "Add FAQ section to documentation"
+  *   [dee52b4] Updated from global requirements
+  *   [3c51838] Switch to non-namespaced module imports
+  *   [dc28858] print better message when choices has an empty string
+  *   [9db5247] None in config choices breaks oslo-config-generator
+  *   [1e42eb8] Merge "Generate help text indicating possible values"
+  *   [0f550d7] Generate help text indicating possible values
+  *   [7da430b] Expand and clean up documentation for the config gene..
+  *   [5379261] Add FAQ section to documentation
+  *   [aefb53b] Merge "fix bug link in readme"
+  *   [d1ccc43] Merge "Add ability to deprecate opts for removal"
+  *   [9a6de3f] fix bug link in readme
+  *   [dacc035] Add ability to deprecate opts for removal
+  *   [8b4d75b] Typo in StrOpt docstring: Integer to String
+  *   [a4abbdb] Merge "Add expose_opt to CfgFilter"
+  *   [b392cf1] Add exception handling for entry points
+  *   [0abac48] Merge "Log a warning when deprecated opts are used"
+  *   [a98dc25] Updated from global requirements
+  *   [be0864a] Add expose_opt to CfgFilter
+  *   [dc1d234] Log a warning when deprecated opts are used
+  *   [578f9f4] Merge "Better check for integer range to account for 0"
+  *   [f9dbf86] Merge "Do not import our namespace package"
+  *   [b27b148] Merge "Add a list_all_sections method to ConfigOpts"
+  *   [04484cb] Merge "Support i18n messages in config generator"
+  *   [362fcc1] Do not import our namespace package
+  *   [f06b7af] Fixes deprecation warning for oslo.config in cfg.py
+  *   [2241353] Clear up MultiStrOpt and related documentation
+  *   [fc6e9e5] Add a list_all_sections method to ConfigOpts
+  *   [0366f88] Better check for integer range to account for 0
+  *   [28fd2cc] Reword DeprecatedOpt docstring
+  *   [ea815b3] Support i18n messages in config generator
+  *   [035636d] Fix of wrong cli opts unregistration
+  *   [99e530e] Merge "Set the version string"
+  *   [f045681] Set the version string
+  *   [6feb19b] Stop sorting options on output
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 27 Apr 2015 08:46:49 +0000
+
 rjil-cicd (1:2014.2.174) trusty; urgency=medium
 
   * Automated build
