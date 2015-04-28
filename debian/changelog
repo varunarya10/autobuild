@@ -1,3 +1,57 @@
+rjil-cicd (1:2014.2.179) trusty; urgency=medium
+
+  * Automated build
+  * oslo.concurrency:
+  *   [d43b160] Merge branch 'master' of github.com:JioCloud/oslo.con..
+  *   [838c2e1] Make sure oslo_concurrency.openstack.common gets inst..
+  *   [ddba72f] Updated from global requirements
+  *   [4d7dce2] Add binary parameter to execute and ssh_execute
+  *   [c05c8c3] Port processutils to Python 3
+  *   [f366bd2] Uncap library requirements for liberty
+  *   [e39e07b] Merge "Move fixtures to test-requirements.txt"
+  *   [0e8b5ee] Merge "Fix test_as_root* tests to work when run as ro..
+  *   [e3c2419] Move fixtures to test-requirements.txt
+  *   [fa415de] Fix test_as_root* tests to work when run as root
+  *   [d04cf66] Add pypi download + version badges
+  *   [fe84d2a] Standardize setup.cfg summary for oslo libs
+  *   [e6f5e19] Imported Translations from Transifex
+  *   [9f949fd] Updated from global requirements
+  *   [a0549bf] Remove tools/run_cross_tests.sh from openstack-common..
+  *   [a2473ed] Merge "Switch to non-namespaced module imports"
+  *   [ff54256] Switch to non-namespaced module imports
+  *   [94624a7] Remove py33 env from default tox list
+  *   [46fcdd3] Add lockutils.get_lock_path() function
+  *   [e3656e7] Imported Translations from Transifex
+  *   [aeb9e17] Updated from global requirements
+  *   [b50feed] Updated from global requirements
+  *   [2f51096] Merge "processutils: execute(): fix option incompatib..
+  *   [cf64a1d] Merge "Drop use of namespaced oslo.i18n"
+  *   [c20a86d] processutils: execute(): fix option incompatibility
+  *   [3d6e372] Ability to set working directory
+  *   [2a9321e] Add eventlet test check to new tests __init__.py
+  *   [343e3bd] Drop use of namespaced oslo.i18n
+  *   [67181a8] Updated from global requirements
+  *   [63c30e5] Updated from global requirements
+  *   [da8176d] Update Oslo imports to remove namespace package
+  *   [f034bd2] Merge "Revert "Port processutils to Python 3""
+  *   [acb55ef] Revert "Port processutils to Python 3"
+  *   [bc9327f] Merge "Bump to hacking 0.10"
+  *   [02f0910] Merge "Updated from global requirements"
+  *   [3dfefe6] Bump to hacking 0.10
+  *   [7489054] Merge "make time format for processutils match lockut..
+  *   [43dc67e] Updated from global requirements
+  *   [df35680] add watchdog module
+  *   [18bcbe2] Updated from global requirements
+  *   [234b007] make time format for processutils match lockutils
+  *   [590444c] Merge "Add a reader/writer lock"
+  *   [75f0f2d] Merge "test compatibility for old imports"
+  *   [a414266] Correct the translation domain for loading messages
+  *   [a6bae13] Merge "Report import warnings where the import occurs"
+  *   [9066336] Add a reader/writer lock
+  *   [093ed4f] Report import warnings where the import occurs
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 28 Apr 2015 11:01:47 +0000
+
 rjil-cicd (1:2014.2.178) trusty; urgency=medium
 
   * Automated build
