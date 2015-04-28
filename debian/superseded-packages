@@ -22,3 +22,5 @@ python-swiftclient
 python-tempest-lib
 python-websockify
 python-stevedore
+python-six
+python3-six
