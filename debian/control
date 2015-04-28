@@ -182,3 +182,15 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-stevedore package
  Automatically generated python-stevedore package
 
+Package: python-six
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-six package
+ Automatically generated python-six package
+
+Package: python3-six
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python3-six package
+ Automatically generated python3-six package
+

@@ -1,3 +1,13 @@
+rjil-cicd (1:2014.2.178) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [7ce8b71] Add python-six
+  * python-six added at revison af4dd12e856f58e599f294068296bf184aa9a1ca
+  * tempest-lib:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 28 Apr 2015 10:52:03 +0000
+
 rjil-cicd (1:2014.2.176) trusty; urgency=medium
 
   * Automated build
