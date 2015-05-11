@@ -29,8 +29,8 @@ override_dh_auto_build: debian/control $(patsubst %,build/%,$(PROJECTS))
 
 override_dh_auto_install: debian/control $(patsubst %,install/%,$(PROJECTS)) debian/rjil-cicd.substvars
 
-clean/%: %/debian
-	cd $* && dh_auto_clean
+clean/%: %/debian debian/chlog
+	#cd $* && dh_auto_clean
 
 build/%: %/debian
 	cd $* && dh_auto_build
