@@ -18,10 +18,16 @@ export SKIP_WRITE_GIT_CHANGELOG=1
 
 export DIST=$(shell dpkg-parsechangelog  | grep ^Distribution: | cut -d ' ' -f2)
 
-VERSION=1:$(PBR_VERSION)
+# For use later, when preparing the final tarball
+export BUILT_VERSION=$(shell dpkg-parsechangelog   | grep ^Version:  | cut -d ' ' -f2 | cut -d ':' -f2)
+
 ifndef BUILD_NUMBER
-VERSION=2:$(PBR_VERSION)
-BUILD_NUMBER=$(shell date +%s)
+	VERSION=2:$(PBR_VERSION)
+	BUILD_NUMBER=$(shell date +%s)
+	DEVBUILD=1
+else
+	VERSION=1:$(PBR_VERSION)
+	DEVBUILD=0
 endif
 
 
@@ -33,6 +39,15 @@ override_dh_auto_clean: debian/control $(patsubst %,clean/%,$(PROJECTS))
 override_dh_auto_build: debian/control $(patsubst %,build/%,$(PROJECTS))
 
 override_dh_auto_install: debian/control $(patsubst %,install/%,$(PROJECTS)) debian/rjil-cicd.substvars
+
+
+override_dh_builddeb:
+	dh_builddeb;
+	# The following has been the ugliest way of determining the build, that needs to be archived. :-(
+	# FTR, the intersting thing is that post dh_builddeb, the make exits. So if we try to reference the variables here, we get
+	# values from a new invocation which are completely irrelevant. Hence, we are determining the build version from the changelog
+	# instead
+	test $(DEVBUILD) -eq 1 && tar -cavf ../developer-build-$(BUILT_VERSION).tar ../*$(BUILT_VERSION)* || echo "Been run from Jenkins"
 
 clean/%: %/debian debian/chlog
 	#cd $* && dh_auto_clean
