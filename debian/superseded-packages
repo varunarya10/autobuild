@@ -7,6 +7,7 @@ python-ironicclient
 python-keystoneclient
 python-keystonemiddleware
 python-msgpack-python
+python-netifaces
 python-neutronclient
 python-novaclient
 python-oslo.concurrency
