@@ -33,6 +33,7 @@ python-six
 python-swiftclient
 python-tempest-lib
 python-tempest
+python-tz
 python-testtools
 python-websockify
 python-stevedore
