@@ -6,7 +6,7 @@ python-ironic
 python-ironicclient
 python-keystoneclient
 python-keystonemiddleware
-python-msgpack-python
+python-msgpack
 python-netifaces
 python-neutronclient
 python-novaclient
