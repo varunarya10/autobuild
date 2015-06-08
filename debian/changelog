@@ -1,3 +1,24 @@
+rjil-cicd (1:2014.2.189) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [15736e5] Merge "Add a doc and test for data_utils.rand_password"
+  *   [8662066] Merge "Add unit tests for basic auth methods in token..
+  *   [e7cf550] Add a doc and test for data_utils.rand_password
+  *   [3fe2672] Merge "Switch to using ostestr for subunit-trace"
+  *   [1efd3a4] Add unit tests for basic auth methods in token clients
+  *   [636aa3b] Merge "Password is not strong enough failures"
+  *   [0e0d39d] Password is not strong enough failures
+  *   [ab309cf] Switch to using ostestr for subunit-trace
+  *   [0841f25] Merge "Add release notes to docs for past few releases"
+  *   [be66e77] Merge "Adding support for neutron-debug CLI."
+  *   [bffd6eb] Merge "Update setup.cfg metadata to reflect reality"
+  *   [6bafd0c] Updated from global requirements
+  *   [71d2ae1] Update setup.cfg metadata to reflect reality
+  *   [522ac74] Add release notes to docs for past few releases
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 08 Jun 2015 12:15:25 +0000
+
 rjil-cicd (1:2014.2.181) trusty; urgency=medium
 
   * Automated build
