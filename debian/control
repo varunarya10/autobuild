@@ -2,13 +2,17 @@ Source: rjil-cicd
 Section: admin
 Priority: optional
 Maintainer: Ritesh Raj Sarraf <Ritesh.Sarraf@ril.com>
-Build-Depends: debhelper (>= 7),
+Build-Depends: cython,
+	       debhelper (>= 7),
                python-all (>= 2.6.6-3~),
                python-pbr (>= 0.6),
                python-setuptools,
                python-sphinx,
                python-prettytable,
                python-dev,
+               python-extras,
+               python-fixtures,
+               python-mimeparse,
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
@@ -43,6 +47,12 @@ Architecture: all
 Depends: rjil-cicd (=${binary:Version})
 Description: ironic-common package
  Automatically generated ironic-common package
+
+Package: python-boto
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-boto package
+ Automatically generated python-boto package
 
 Package: python-cinderclient
 Architecture: all
@@ -80,6 +90,18 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-keystonemiddleware package
  Automatically generated python-keystonemiddleware package
 
+Package: python-msgpack
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-msgpack package
+ Automatically generated python-msgpack package
+
+Package: python-netifaces
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-netifaces package
+ Automatically generated python-netifaces package
+
 Package: python-neutronclient
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
@@ -97,6 +119,12 @@ Architecture: all
 Depends: rjil-cicd (=${binary:Version})
 Description: python-oslo.concurrency package
  Automatically generated python-oslo.concurrency package
+
+Package: python-oslo-concurrency
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-concurrency package
+ Automatically generated python-oslo-concurrency package
 
 Package: python-oslo-config
 Architecture: all
@@ -128,6 +156,18 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-oslo.db package
  Automatically generated python-oslo.db package
 
+Package: python-oslo.i18n
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.i18n package
+ Automatically generated python-oslo.i18n package
+
+Package: python-oslo-i18n
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-i18n package
+ Automatically generated python-oslo-i18n package
+
 Package: python-oslo.log
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
@@ -139,6 +179,36 @@ Architecture: all
 Depends: rjil-cicd (=${binary:Version})
 Description: python-oslo.messaging package
  Automatically generated python-oslo.messaging package
+
+Package: python-oslo-serialization
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-serialization package
+ Automatically generated python-oslo-serialization package
+
+Package: python-oslo.serialization
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.serialization package
+ Automatically generated python-oslo.serialization package
+
+Package: python-oslo-utils
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo-utils package
+ Automatically generated python-oslo-utils package
+
+Package: python-oslo.utils
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-oslo.utils package
+ Automatically generated python-oslo.utils package
+
+Package: python-paramiko
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-paramiko package
+ Automatically generated python-paramiko package
 
 Package: python-posix-ipc
 Architecture: all
@@ -158,6 +228,12 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-retrying package
  Automatically generated python-retrying package
 
+Package: python-six
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-six package
+ Automatically generated python-six package
+
 Package: python-swiftclient
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
@@ -169,6 +245,24 @@ Architecture: all
 Depends: rjil-cicd (=${binary:Version})
 Description: python-tempest-lib package
  Automatically generated python-tempest-lib package
+
+Package: python-tempest
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-tempest package
+ Automatically generated python-tempest package
+
+Package: python-tz
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-tz package
+ Automatically generated python-tz package
+
+Package: python-testtools
+Architecture: all
+Depends: rjil-cicd (=${binary:Version})
+Description: python-testtools package
+ Automatically generated python-testtools package
 
 Package: python-websockify
 Architecture: all
@@ -182,15 +276,9 @@ Depends: rjil-cicd (=${binary:Version})
 Description: python-stevedore package
  Automatically generated python-stevedore package
 
-Package: python-six
+Package: python-os-testr
 Architecture: all
 Depends: rjil-cicd (=${binary:Version})
-Description: python-six package
- Automatically generated python-six package
-
-Package: python3-six
-Architecture: all
-Depends: rjil-cicd (=${binary:Version})
-Description: python3-six package
- Automatically generated python3-six package
+Description: python-os-testr package
+ Automatically generated python-os-testr package
 
