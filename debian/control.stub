@@ -13,8 +13,6 @@ Build-Depends: cython,
                python-extras,
                python-fixtures,
                python-mimeparse,
-               python-testresources,
-               python-twisted,
 Standards-Version: 3.9.2
 
 Package: rjil-cicd
