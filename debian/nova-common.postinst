@@ -16,24 +16,10 @@ if [ "$1" = "configure" ]; then
     if [ -z "$2" ]; then
       # New install - blanket permissions
       chown -R nova:nova /var/lib/nova/
-    elif dpkg --compare-versions "$2" lt "2011.3-0ubuntu4"; then
-      # make sure that LXC rootfs mount points are excleuded
-      # during upgrades from previous versions
-      find /var/lib/nova/ -name 'rootfs' -prune -o \
-        -group root -a -user nova -exec chown nova:nova {} \;
-      find /var/lib/nova/ -name 'rootfs' -prune -o \
-        -group nogroup -a -user nova -exec chown nova:nova {} \;
-    elif dpkg --compare-versions "$2" lt "2012.2~f1~20120503.13935-0ubuntu1"; then
-	  # convert the root_helper to rootwrap_config
-	  sed -e "s,^root_helper=.\+,rootwrap_config=/etc/nova/rootwrap.conf," -i /etc/nova/nova.conf
     fi	
 
     if [ "$(id -gn nova)"  = "nogroup" ]; then
         usermod -g nova nova
-    fi
-
-    if dpkg --compare-versions "$2" lt "2012.1~e3-0ubuntu2"; then
-      usermod -s "/bin/false" nova
     fi
 
     chown -R nova:nova /etc/nova
@@ -42,13 +28,6 @@ if [ "$1" = "configure" ]; then
     if [ -z "$2" ]; then
         # New install - blanket permissions
         chown -R nova:nova /var/lib/nova/
-    elif dpkg --compare-versions "$2" lt "2011.3-0ubuntu4"; then
-        # Make sure the LXC rootfs mount points are excluded
-        # during upgrades from previous versions
-        find /var/lib/nova/ -name 'rootfs' -prune -o \
-           -group root -a -user nova -exec chown nova:nova {} \;
-        find /var/lib/nova/ -name 'rootfs' -prune -o \
-           -group nogroup -a -user nova -exec chown nova:nova {} \;
     fi
 
     chmod 0640 /etc/nova/nova.conf
