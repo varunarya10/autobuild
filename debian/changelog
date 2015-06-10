@@ -1,3 +1,234 @@
+rjil-cicd (1:2014.2.191) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [122887e] Merge pull request #17 from bodepd/tempest_is_ready
+  *   [72fda6f] Add python-os-testr to superseded-packages
+  *   [3344bfb] No need for testresources or twisted at build time
+  *   [567b5e9] fix name of python-msgpack
+  *   [ba64337] Add python-tz
+  *   [461cd45] Add python-netifaces as a supersceded package
+  *   [e2833e7] Add changes to merge tempest into rjil-cicd
+  * boto added at revison cb8aeec987ddcd5fecd206e38777b9a15cb0bcab
+  * msgpack-python added at revison
+    838adb8a768b6df1d6460650e1aca6d15279517b
+  * os-testr added at revison de604832c3ece2aaeb56cc7a427dcb1dd833c0e1
+  * oslo.i18n added at revison 2de2898636ee87e62549f3ba02d270ff485f7608
+  * oslo.serialization added at revison
+    e52fdfaf187544b54b295e8efb5931086ce873f6
+  * oslo.utils added at revison a18b0511440c635897346786651dc54311fb0119
+  * paramiko added at revison cfeca480db0116c5c8d95ba1aaa9e5e5e02951ed
+  * python-netifaces added at revison
+    d3eb48952d4e73a1cfb44c784ec7f0d5c4049e45
+  * pytz_2015_4 added at revison
+    4cdf863c6f2dd34beb72908c3b05c3aeb863c02b
+  * tempest:
+  * testtools added at revison 98a74c6bfc806dbf0503ea549363a7251d880584
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 09 Jun 2015 20:00:57 +0000
+
+rjil-cicd (1:2014.2.189) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [15736e5] Merge "Add a doc and test for data_utils.rand_password"
+  *   [8662066] Merge "Add unit tests for basic auth methods in token..
+  *   [e7cf550] Add a doc and test for data_utils.rand_password
+  *   [3fe2672] Merge "Switch to using ostestr for subunit-trace"
+  *   [1efd3a4] Add unit tests for basic auth methods in token clients
+  *   [636aa3b] Merge "Password is not strong enough failures"
+  *   [0e0d39d] Password is not strong enough failures
+  *   [ab309cf] Switch to using ostestr for subunit-trace
+  *   [0841f25] Merge "Add release notes to docs for past few releases"
+  *   [be66e77] Merge "Adding support for neutron-debug CLI."
+  *   [bffd6eb] Merge "Update setup.cfg metadata to reflect reality"
+  *   [6bafd0c] Updated from global requirements
+  *   [71d2ae1] Update setup.cfg metadata to reflect reality
+  *   [522ac74] Add release notes to docs for past few releases
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 08 Jun 2015 12:15:25 +0000
+
+rjil-cicd (1:2014.2.181) trusty; urgency=medium
+
+  * Automated build
+  * oslo.concurrency:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Wed, 29 Apr 2015 10:16:29 +0000
+
+rjil-cicd (1:2014.2.179) trusty; urgency=medium
+
+  * Automated build
+  * oslo.concurrency:
+  *   [d43b160] Merge branch 'master' of github.com:JioCloud/oslo.con..
+  *   [838c2e1] Make sure oslo_concurrency.openstack.common gets inst..
+  *   [ddba72f] Updated from global requirements
+  *   [4d7dce2] Add binary parameter to execute and ssh_execute
+  *   [c05c8c3] Port processutils to Python 3
+  *   [f366bd2] Uncap library requirements for liberty
+  *   [e39e07b] Merge "Move fixtures to test-requirements.txt"
+  *   [0e8b5ee] Merge "Fix test_as_root* tests to work when run as ro..
+  *   [e3c2419] Move fixtures to test-requirements.txt
+  *   [fa415de] Fix test_as_root* tests to work when run as root
+  *   [d04cf66] Add pypi download + version badges
+  *   [fe84d2a] Standardize setup.cfg summary for oslo libs
+  *   [e6f5e19] Imported Translations from Transifex
+  *   [9f949fd] Updated from global requirements
+  *   [a0549bf] Remove tools/run_cross_tests.sh from openstack-common..
+  *   [a2473ed] Merge "Switch to non-namespaced module imports"
+  *   [ff54256] Switch to non-namespaced module imports
+  *   [94624a7] Remove py33 env from default tox list
+  *   [46fcdd3] Add lockutils.get_lock_path() function
+  *   [e3656e7] Imported Translations from Transifex
+  *   [aeb9e17] Updated from global requirements
+  *   [b50feed] Updated from global requirements
+  *   [2f51096] Merge "processutils: execute(): fix option incompatib..
+  *   [cf64a1d] Merge "Drop use of namespaced oslo.i18n"
+  *   [c20a86d] processutils: execute(): fix option incompatibility
+  *   [3d6e372] Ability to set working directory
+  *   [2a9321e] Add eventlet test check to new tests __init__.py
+  *   [343e3bd] Drop use of namespaced oslo.i18n
+  *   [67181a8] Updated from global requirements
+  *   [63c30e5] Updated from global requirements
+  *   [da8176d] Update Oslo imports to remove namespace package
+  *   [f034bd2] Merge "Revert "Port processutils to Python 3""
+  *   [acb55ef] Revert "Port processutils to Python 3"
+  *   [bc9327f] Merge "Bump to hacking 0.10"
+  *   [02f0910] Merge "Updated from global requirements"
+  *   [3dfefe6] Bump to hacking 0.10
+  *   [7489054] Merge "make time format for processutils match lockut..
+  *   [43dc67e] Updated from global requirements
+  *   [df35680] add watchdog module
+  *   [18bcbe2] Updated from global requirements
+  *   [234b007] make time format for processutils match lockutils
+  *   [590444c] Merge "Add a reader/writer lock"
+  *   [75f0f2d] Merge "test compatibility for old imports"
+  *   [a414266] Correct the translation domain for loading messages
+  *   [a6bae13] Merge "Report import warnings where the import occurs"
+  *   [9066336] Add a reader/writer lock
+  *   [093ed4f] Report import warnings where the import occurs
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 28 Apr 2015 11:01:47 +0000
+
+rjil-cicd (1:2014.2.178) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [7ce8b71] Add python-six
+  * python-six added at revison af4dd12e856f58e599f294068296bf184aa9a1ca
+  * tempest-lib:
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 28 Apr 2015 10:52:03 +0000
+
+rjil-cicd (1:2014.2.176) trusty; urgency=medium
+
+  * Automated build
+  * oslo.config:
+  *   [2e32e58] Uncap library requirements for liberty
+  *   [3ab4039] Merge "Added Raw Value Loading to Test Fixture"
+  *   [ec4b6a6] Merge "Generate docs for constructor"
+  *   [ef72ab4] Merge "Fix doc build warning"
+  *   [e9fb0ba] Merge "Add deprecated_for_removal support to the conf..
+  *   [e30131a] Added Raw Value Loading to Test Fixture
+  *   [cc14a30] Add pypi download + version badges
+  *   [1e9033a] Update hacking to kilo level
+  *   [abe1727] Add deprecated_for_removal support to the config gene..
+  *   [aa0a08b] Generate docs for constructor
+  *   [2761029] Fix doc build warning
+  *   [5a71eed] Merge "Expand and clean up documentation for the conf..
+  *   [e2d800d] Merge "Add FAQ section to documentation"
+  *   [dee52b4] Updated from global requirements
+  *   [3c51838] Switch to non-namespaced module imports
+  *   [dc28858] print better message when choices has an empty string
+  *   [9db5247] None in config choices breaks oslo-config-generator
+  *   [1e42eb8] Merge "Generate help text indicating possible values"
+  *   [0f550d7] Generate help text indicating possible values
+  *   [7da430b] Expand and clean up documentation for the config gene..
+  *   [5379261] Add FAQ section to documentation
+  *   [aefb53b] Merge "fix bug link in readme"
+  *   [d1ccc43] Merge "Add ability to deprecate opts for removal"
+  *   [9a6de3f] fix bug link in readme
+  *   [dacc035] Add ability to deprecate opts for removal
+  *   [8b4d75b] Typo in StrOpt docstring: Integer to String
+  *   [a4abbdb] Merge "Add expose_opt to CfgFilter"
+  *   [b392cf1] Add exception handling for entry points
+  *   [0abac48] Merge "Log a warning when deprecated opts are used"
+  *   [a98dc25] Updated from global requirements
+  *   [be0864a] Add expose_opt to CfgFilter
+  *   [dc1d234] Log a warning when deprecated opts are used
+  *   [578f9f4] Merge "Better check for integer range to account for 0"
+  *   [f9dbf86] Merge "Do not import our namespace package"
+  *   [b27b148] Merge "Add a list_all_sections method to ConfigOpts"
+  *   [04484cb] Merge "Support i18n messages in config generator"
+  *   [362fcc1] Do not import our namespace package
+  *   [f06b7af] Fixes deprecation warning for oslo.config in cfg.py
+  *   [2241353] Clear up MultiStrOpt and related documentation
+  *   [fc6e9e5] Add a list_all_sections method to ConfigOpts
+  *   [0366f88] Better check for integer range to account for 0
+  *   [28fd2cc] Reword DeprecatedOpt docstring
+  *   [ea815b3] Support i18n messages in config generator
+  *   [035636d] Fix of wrong cli opts unregistration
+  *   [99e530e] Merge "Set the version string"
+  *   [f045681] Set the version string
+  *   [6feb19b] Stop sorting options on output
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Mon, 27 Apr 2015 08:46:49 +0000
+
+rjil-cicd (1:2014.2.174) trusty; urgency=medium
+
+  * Automated build
+  * Packaging:
+  *   [766cfb1] Also build python-oslo-{context,config} pkgs
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 23 Apr 2015 07:16:36 +0000
+
+rjil-cicd (1:2014.2.172) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [d4a677b] Merge remote-tracking branch 'upstream/master'
+  *   [0b50366] Merge "Migrate ssh.py from tempest"
+  *   [9f5ff08] Migrate ssh.py from tempest
+  *   [5b7a6f5] Merge "Add a unit test for __str__() of rest_client"
+  *   [71093e4] Merge "Move to hacking 0.10"
+  *   [bbfee4d] Add a unit test for __str__() of rest_client
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Tue, 21 Apr 2015 08:01:42 +0000
+
+rjil-cicd (1:2014.2.170) trusty; urgency=medium
+
+  * Automated build
+  * tempest-lib:
+  *   [fadbd3a] Merge remote-tracking branch 'upstream/master'
+  *   [7e4dcf7] Merge "Add docstrings to data_utils"
+  *   [356a664] Merge "Add unit tests for properties of rest_client"
+  *   [efdce40] Add docstrings to data_utils
+  *   [88d5d61] Add unit tests for properties of rest_client
+  *   [d7c15b8] Add a unit test for get_versions()
+  *   [c46441a] Merge "Fix docstring for rest_client module"
+  *   [28aac6b] Merge "Migrated test_credentials.py to tempest-lib"
+  *   [fc92864] Add unit tests for __str__ method of ResponseBody* cl..
+  *   [70bbbd5] Merge "Add a unit test for get_ipv6_addr_by_EUI64"
+  *   [ae3d878] Migrated test_credentials.py to tempest-lib
+  *   [3ff65f7] Fix docstring for rest_client module
+  *   [f4b8c6f] Add a test case for rand_name with prefix
+  *   [4988215] Add a unit test for get_ipv6_addr_by_EUI64
+  *   [32369db] Merge "Add test cases for random utilities"
+  *   [c01fe63] Merge "Fix an error of tox -ecover"
+  *   [c20857c] Merge "Add optional prefix parameter to rand_name fun..
+  *   [a4f8089] Add test cases for random utilities
+  *   [8d3b72f] Fix an error of tox -ecover
+  *   [4a2cd42] Add optional prefix parameter to rand_name function
+  *   [4558df5] Updated from global requirements
+  *   [426d031] Add InvalidCredentials to tempest-lib
+  *   [5e02b8b] Migrated auth.py and related unit tests from tempest
+  *   [ed27340] Support specifying the tempest git URL
+  *   [59b3f34] Migrate token clients to tempest-lib
+  *   [5512c43] Merge "Add api docs to the rest client"
+  *   [39b10c6] Merge "Updated from global requirements"
+  *   [0a571c6] Add api docs to the rest client
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Fri, 03 Apr 2015 04:32:29 +0000
+
 rjil-cicd (1:2014.2.163) trusty; urgency=medium
 
   * Automated build

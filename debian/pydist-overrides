@@ -1,1 +1,2 @@
 pysendfile python-sendfile
+msgpack-python python-msgpack
