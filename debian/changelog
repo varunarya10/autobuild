@@ -1,3 +1,26 @@
+rjil-cicd (1:2014.2.206) trusty; urgency=medium
+
+  * Automated build
+  * tempest:
+  * tempest-lib:
+  *   [c4babc5] Merge pull request #3 from pandeyop/rebasePkg
+  *   [a3655c7] Fix requirements files for particular version of pack..
+  *   [c096afa] Merge "Categorize rest client exceptions"
+  *   [31662ca] Make resp_body optional on RestClientException
+  *   [8f67d9f] Merge "Revert "Adding support for neutron-debug CLI.""
+  *   [9aeafe9] Revert "Adding support for neutron-debug CLI."
+  *   [061a2ef] Updated from global requirements
+  *   [b48f9fe] Categorize rest client exceptions
+  *   [8c26c5c] Merge "Allows any valid ISO8601 timestamp in token ex..
+  *   [1718afe] Merge "Explicitly add json schema validator for schem..
+  *   [70671eb] Remove unnecessary oslo-incubator code
+  *   [aa92ff0] Allows any valid ISO8601 timestamp in token expiry ti..
+  *   [7c2ad79] Explicitly add json schema validator for schema valid..
+  *   [f46b6c9] Fix 'format' checking for json schema validation
+  *   [ad2d4e9] Add unit tests for rest_client's json schema validation
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Wed, 08 Jul 2015 09:15:00 +0000
+
 rjil-cicd (1:2014.2.203) trusty; urgency=medium
 
   * Automated build
