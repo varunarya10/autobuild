@@ -1,3 +1,212 @@
+rjil-cicd (1:2014.2.208) trusty; urgency=medium
+
+  * Automated build
+  * python-glanceclient:
+  *   [d1ef541] Merge branch 'master' of github.com:JioCloud/python-g..
+  *   [bb5365b] Force ssl compression always
+  *   [731cc77] Merge "Do not fall back to namespaced oslo.i18n"
+  *   [099b49a] Merge "Account for dictionary order in test_shell.py"
+  *   [1b93adc] Account for dictionary order in test_shell.py
+  *   [e192a39] Do not fall back to namespaced oslo.i18n
+  *   [b10e893] Updated from global requirements
+  *   [cc38f51] Merge "Add v2 support for the marker attribute"
+  *   [ea01f13] Add v2 support for the marker attribute
+  *   [dc3dd87] Merge "Import only modules and update tox.ini"
+  *   [997c12d] Import only modules and update tox.ini
+  *   [0810805] Updated from global requirements
+  *   [71d8528] Merge "Close iterables at the end of iteration"
+  *   [0d22e82] Merge "Add parameter 'changes-since' for image-list o..
+  *   [e863cb3] Merge "cleanup openstack-common.conf and sync updated..
+  *   [43621dc] Close iterables at the end of iteration
+  *   [5ce9c7d] Make glanceclient accept a session object
+  *   [5e85d61] cleanup openstack-common.conf and sync updated files
+  *   [db6420b] Add release notes for 0.19.0
+  *   [dfa98ab] Updated from global requirements
+  *   [d80c70e] Merge "Improve import related error handling"
+  *   [7ab3490] Merge "Fixed doc example"
+  *   [0648221] Merge "Fix Metadef Object update issue with python-gl..
+  *   [8507809] Merge "Use assertIn instead of assertTrue in tests"
+  *   [0bf3bfe] Merge "Unorder compare in tests"
+  *   [2eb5292] Merge "Include owner and status option in v2 image li..
+  *   [0c244b2] Merge "Check image-download for redirection"
+  *   [048e763] Merge "Fix functional tests in gate"
+  *   [6cb26fc] Include owner and status option in v2 image list
+  *   [5d933b0] Fix Metadef Object update issue with python-glancecli..
+  *   [e180dbf] Merge "Add release notes for 0.18.0"
+  *   [9f5c581] Fix functional tests in gate
+  *   [688f902] Merge "Do not crash on homedir mkdir"
+  *   [1686d6a] Do not crash on homedir mkdir
+  *   [1f89beb] Improve import related error handling
+  *   [116fac8] Add parameter 'changes-since' for image-list of v1
+  *   [583adc3] Check image-download for redirection
+  *   [9c172fb] Add some basic CLI functional tests
+  *   [bf413a6] Use assertIn instead of assertTrue in tests
+  *   [9fac2a5] Merge "Create functional test base"
+  *   [6431fae] Unorder compare in tests
+  *   [d4d7fdc] Merge "Move unit tests to standard directory"
+  *   [5fa71aa] Add release notes for 0.18.0
+  *   [6d31116] Update README to work with release tools
+  *   [71d9783] Create functional test base
+  *   [f2a8a52] Move unit tests to standard directory
+  *   [825c4a5] Merge "Correct help messages for image-update command"
+  *   [8b4456a] Uncap library requirements for liberty
+  *   [dfcce08] Merge "Omit 'locations' as image-create parameter"
+  *   [9184429] Merge "Fix https stack trace on python 3.4 client"
+  *   [6a2e9f3] Merge "Fix client when using no ssl compression"
+  *   [4753ee3] Merge "Add unit tests for log_curl_request"
+  *   [b9338ce] Merge "Add SSL cert verification regression tests"
+  *   [76c9f68] Add unit tests for log_curl_request
+  *   [549761c] Merge "Test unit for checking update active images"
+  *   [bd0aa06] Fix https stack trace on python 3.4 client
+  *   [c698b4e] Fix client when using no ssl compression
+  *   [64a1a0f] Add SSL cert verification regression tests
+  *   [c730266] Omit 'locations' as image-create parameter
+  *   [287bf62] Merge "Validate tag name when filtering for images"
+  *   [93569c6] Merge "glance image-show now have --human-readable op..
+  *   [5b4aef5] Merge "Creating task with invalid property crashes in..
+  *   [c634c51] Merge "Expose 'is_base' schema property attribute"
+  *   [a6234d1] Creating task with invalid property crashes in py3
+  *   [fd2f989] Don't accept *args for client
+  *   [e386e44] Stub authentication requests rather than plugins
+  *   [27f70bb] Remove keystoneclient mocks
+  *   [02b1a05] Replace mox in tests with requests-mock
+  *   [b3d2c63] Merge "Use any instead of False in generator"
+  *   [90407d9] Expose 'is_base' schema property attribute
+  *   [2c08b40] Validate tag name when filtering for images
+  *   [13b5a5a] Remove redundant FakeSchemaAPI __init__ method
+  *   [15c2e40] Merge "Generate API documentation"
+  *   [c149a94] glance image-show now have --human-readable option
+  *   [42d7548] Test unit for checking update active images
+  *   [6d864ef] Correct help messages for image-update command
+  *   [26280ed] Add release notes for 0.17.0
+  *   [3a69231] Merge "Updated help for v2 member-update api"
+  *   [1c4d9f7] Merge "add examples for properties and doc build scri..
+  *   [db5d729] Updated help for v2 member-update api
+  *   [6db625f] Merge "Extend images CLI v2 with new sorting syntax"
+  *   [82143e2] Merge "Add the ability to specify the sort dir for ea..
+  *   [c32a414] Merge "Adds the ability to sort images with multiple ..
+  *   [3f3066b] Extend images CLI v2 with new sorting syntax
+  *   [7c54b14] Merge "Apply expected patch format when updating tags..
+  *   [bbd27d5] Add the ability to specify the sort dir for each key
+  *   [976fe17] Import sys module
+  *   [fc79467] Adds the ability to sort images with multiple keys
+  *   [f00f769] add examples for properties and doc build script
+  *   [f6f5733] Apply expected patch format when updating tags in v2...
+  *   [cc4c402] Merge "Fix leaking sockets after v1 list operation"
+  *   [3e207dc] Merge "Fix minor typo in version error message"
+  *   [2858645] Merge "Unit tests covering missing username or passwo..
+  *   [9e09211] Merge "Remove duplicate 'a' in the help string of --o..
+  *   [23c8d18] Merge "v2: read limit for list from --limit in shell"
+  *   [f32e827] Merge "Fix leaking sockets after v2 list operation"
+  *   [c7c4ac9] Merge "v2: Allow upload from stdin on image-create"
+  *   [8eaf97d] Merge "Fix v2 image create --file documentation"
+  *   [a9a692b] v2: read limit for list from --limit in shell
+  *   [0ab5a78] Fix leaking sockets after v2 list operation
+  *   [59eec05] Merge "removed excessive call to os.path.exists"
+  *   [f98ab68] Fix leaking sockets after v1 list operation
+  *   [d381469] Add release notes for 0.16.1
+  *   [e6d2f63] Merge "Show error on trying to upload to non-queued i..
+  *   [ab52bf3] Merge "Unify using six.moves.range rename everywhere"
+  *   [5ce1de9] Merge "https: Prevent leaking sockets for some operat..
+  *   [d8d6cd5] Merge "Workflow documentation is now in infra-manual"
+  *   [74884fb] Merge "Fix tests failing if keystone is running local..
+  *   [7f9b643] Merge "Remove graduated gettextutils from openstack/c..
+  *   [6e0b1f4] removed excessive call to os.path.exists
+  *   [96871b9] Fix tests failing if keystone is running locally
+  *   [99c46d6] Merge "Strip json and html from error messages"
+  *   [db0179f] Merge "Register our own ConnectionPool without globals"
+  *   [2d67dfa] Unify using six.moves.range rename everywhere
+  *   [519672f] Add release notes for 0.16.0
+  *   [437c44f] Merge "Fixed CLI help for bash-completion"
+  *   [93ca39b] Merge "Reduce the set of supported client SSL ciphers"
+  *   [654ba87] Merge "Glance image delete output"
+  *   [72f0bc3] Merge "Update HTTPS certificate handling for pep-0476"
+  *   [af29e0a] Show error on trying to upload to non-queued image
+  *   [ef9fd9f] https: Prevent leaking sockets for some operations
+  *   [f7cdc3e] Glance image delete output
+  *   [01caf4e] Strip json and html from error messages
+  *   [f272ab3] Generate API documentation
+  *   [b47925e] Unit tests covering missing username or password
+  *   [7ee96cb] Register our own ConnectionPool without globals
+  *   [a3eaafe] Updated from global requirements
+  *   [1c37721] Merge "Return 130 for keyboard interrupt"
+  *   [60e7beb] Merge "Change oslo.utils to oslo_utils"
+  *   [0272106] Merge "Close streamed requests explicitly"
+  *   [ffcb324] Merge "Adds basic examples of v2 API usage"
+  *   [e99e0c8] Change oslo.utils to oslo_utils
+  *   [ce5e1f0] Merge "Ignore NoneType when encoding headers"
+  *   [945a697] Merge "Use utils.exit rather than print+sys.exit"
+  *   [96ff6e4] Return 130 for keyboard interrupt
+  *   [5b2603d] Merge "Disable progress bar if image is piped into cl..
+  *   [9a78cb2] Merge "Add validation to --property-filter in v1 shell"
+  *   [db743e3] Ignore NoneType when encoding headers
+  *   [1d82396] Remove graduated gettextutils from openstack/common
+  *   [869e6ac] Use utils.exit rather than print+sys.exit
+  *   [5ec4a24] Remove uuidutils from openstack-common
+  *   [b595ab7] Merge "Remove openstack.common.importutils"
+  *   [4bfd8d5] Merge "Remove openstack.common.strutils"
+  *   [93c9bc1] Add a `--limit` parameter to list operations
+  *   [9daada9] Fixed CLI help for bash-completion
+  *   [878bdcb] Remove openstack.common.importutils
+  *   [b818826] Remove openstack.common.strutils
+  *   [35c9b65] Adds basic examples of v2 API usage
+  *   [363b170] Sync latest apiclient from oslo-inc
+  *   [cb34b9b] Merge "Handle HTTP byte returns in python 3"
+  *   [88f6319] Merge "Make non-boolean check strict"
+  *   [b64dba8] Remove duplicate 'a' in the help string of --os-image..
+  *   [f210751] Close streamed requests explicitly
+  *   [62df6c6] Handle HTTP byte returns in python 3
+  *   [aebbcff] Updated from global requirements
+  *   [cb046bc] Add validation to --property-filter in v1 shell
+  *   [dac71b4] Merge "Curl statements to include globoff for IPv6 UR..
+  *   [6d21959] v2: Allow upload from stdin on image-create
+  *   [4c7c7ad] Fix v2 image create --file documentation
+  *   [6eaaad5] Make non-boolean check strict
+  *   [9054324] Disable progress bar if image is piped into client
+  *   [df02ee8] Fix Requests breaking download progress bar
+  *   [7ce1ff9] Merge "Add os_ prefix to project_domain_name/id"
+  *   [e3600ad] Fix broken-pipe seen in glance-api
+  *   [b96f613] Update HTTPS certificate handling for pep-0476
+  *   [0cdc947] Merge "Output clear error message on invalid api vers..
+  *   [385d97e] Add release notes for 0.15.0
+  *   [9a4d858] Support Pagination for namespace list
+  *   [8e8dde2] Output clear error message on invalid api version
+  *   [3989cd2] Support schema types with non-str value
+  *   [9829d7b] Don't require version to create Client instance
+  *   [bd73a54] Add os_ prefix to project_domain_name/id
+  *   [a755d1f] Workflow documentation is now in infra-manual
+  *   [521cc25] Merge "Add release notes for 0.14.0 - 0.14.2"
+  *   [6998179] Merge "Send `identity_headers` through the wire"
+  *   [6a6a5ef] Merge "Allow --file in image-create with v2 Image API"
+  *   [acb1659] Merge "Add useful error on invalid --os-image-api-ver..
+  *   [a1bb3eb] Use any instead of False in generator
+  *   [8e02b2a] Allow --file in image-create with v2 Image API
+  *   [d5a0e65] Add useful error on invalid --os-image-api-version
+  *   [49f38a4] Add release notes for 0.14.0 - 0.14.2
+  *   [eeef763] Fix minor typo in version error message
+  *   [5080d10] Send `identity_headers` through the wire
+  *   [3b6754a] Merge "Adds tty password entry for glanceclient"
+  *   [465c5ce] Curl statements to include globoff for IPv6 URLs
+  *   [265bb4a] Merge "Add bash completion to glance client"
+  *   [9a4fec4] Merge "Refactor method of constructing dicts in some ..
+  *   [46bfeb4] Merge "Don't set X-Auth-Token key in http session hea..
+  *   [b04bbf3] Merge "'--public' ignored on image create"
+  *   [3756388] Merge "Add --property-filter option to v2 image-list"
+  *   [d0851c3] Remove readonly options from v2 shell commands
+  *   [4194a55] Add --property-filter option to v2 image-list
+  *   [711f28a] Merge "Fix py34 failure for glance client"
+  *   [b126351] Merge "Fix to ensure endpoint_type is used by _get_en..
+  *   [ef0abdc] Fix py34 failure for glance client
+  *   [8c159a2] Don't set X-Auth-Token key in http session header if ..
+  *   [b83a672] Refactor method of constructing dicts in some tests
+  *   [751e064] Adds tty password entry for glanceclient
+  *   [f931a20] Fixed doc example
+  *   [597da8a] '--public' ignored on image create
+  *   [9dcf3f1] Reduce the set of supported client SSL ciphers
+  *   [cbbfbc9] Fix to ensure endpoint_type is used by _get_endpoint()
+
+ -- Ritesh Raj Sarraf <jiojenkins@jiojenkins01>  Thu, 09 Jul 2015 10:02:00 +0000
+
 rjil-cicd (1:2014.2.206) trusty; urgency=medium
 
   * Automated build
